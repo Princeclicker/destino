@@ -1,0 +1,28 @@
+<!--====== End Header ======-->
+
+    <section class="page-banner overlay pt-170 pb-220 bg_cover" style="background-image: url(IMG/theme/images/page-bg.jpg);">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="page-banner-content text-center text-white">
+                        <h1 class="page-title">Home</h1>
+                        <ul class="breadcrumb-link text-white">
+                            <li><a href="/">Home</a></li>
+                            <li class="active">Home</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-section pt-100 pb-60">
+        <div class="container">
+            <BOUCLE_principale(RUBRIQUES){id_rubrique=64}>
+            <h2 class="mb-30">#TITRE</h2>
+            [<p>#DESCRIPTIF|textebrut</p>]
+            [<div class="texte">#TEXTE</div>]
+            </BOUCLE_principale>
+            <p><a href="/">View the homepage &rarr;</a></p>
+        </div>
+    </section>
