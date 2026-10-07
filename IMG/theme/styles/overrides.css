@@ -281,4 +281,155 @@
 .main-footer.gray-bg { background-color: #EEF1F5; }
 
 
+/* 9. Article / story pages (article.html, 404.html use the same classes).
+
+   These templates shipped with class names that no stylesheet defines
+   (page-head, wrap, section-body, prose, crumbs, siblings, back-link), so the
+   stories rendered as bare text. The story body is now one large card with
+   rounded corners that scrolls inside itself (max-height + overflow-y), so the
+   breadcrumb stays put while the article is read. */
+
+.page-head {
+  background: #EEF1F5;
+  padding: 22px 0;
+  margin-bottom: 34px;
+}
+
+.wrap.section-body,
+.page-head .wrap {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.wrap.section-body { padding-bottom: 70px; }
+
+.crumbs ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+.crumbs li { display: flex; align-items: center; gap: 6px; color: #868686; }
+.crumbs li + li::before { content: "/"; color: #B1B6B3; }
+.crumbs li a { color: #006B68; text-decoration: none; }
+.crumbs li a:hover { color: #54B948; }
+.crumbs li[aria-current] { color: #003B73; font-weight: 600; }
+
+/* The big card: rounded, shadowed, and scrollable on its own. */
+.article-card {
+  background: #fff;
+  border: 1px solid rgba(0, 59, 115, .08);
+  border-radius: 28px;
+  box-shadow: 0 24px 60px rgba(0, 59, 115, .12);
+  padding: 48px 56px;
+  max-height: 78vh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #54B948 #EEF1F5;
+}
+
+.article-card::-webkit-scrollbar { width: 12px; }
+.article-card::-webkit-scrollbar-track { background: #EEF1F5; border-radius: 12px; }
+.article-card::-webkit-scrollbar-thumb {
+  background: #54B948;
+  border: 3px solid #EEF1F5;
+  border-radius: 12px;
+}
+.article-card::-webkit-scrollbar-thumb:hover { background: #006B68; }
+
+.article-card .page-title {
+  margin: 0 0 12px;
+  font-size: clamp(26px, 3vw, 40px);
+  line-height: 1.25;
+  color: #003B73;
+}
+
+.article-card .page-lead {
+  margin: 0 0 28px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #006B68;
+}
+
+.prose p {
+  margin: 0 0 20px;
+  font-size: 16.5px;
+  line-height: 1.9;
+  color: #003B73;
+}
+
+.prose h2,
+.prose h3 {
+  margin: 34px 0 14px;
+  color: #003B73;
+}
+
+.prose ul,
+.prose ol {
+  margin: 0 0 22px;
+  padding-left: 22px;
+  color: #003B73;
+}
+
+.prose li { margin-bottom: 8px; line-height: 1.8; }
+
+/* Related stories inside the card. */
+.article-card .siblings {
+  margin-top: 40px;
+  padding-top: 28px;
+  border-top: 1px dashed rgba(0, 59, 115, .18);
+}
+
+.article-card .body-h {
+  font-size: 18px;
+  margin: 0 0 16px;
+  color: #003B73;
+}
+
+.article-card .sibling-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.article-card .sibling-list li a {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #EEF1F5;
+  color: #003B73;
+  border-radius: 999px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background .25s ease, color .25s ease;
+}
+
+.article-card .sibling-list li a:hover { background: #54B948; color: #fff; }
+
+.article-card .back-link { margin: 28px 0 0; }
+.article-card .text-link { color: #006B68; text-decoration: none; font-weight: 600; }
+.article-card .text-link:hover { color: #54B948; }
+
+/* Phones: keep the card scrollable but give the text room to breathe. */
+@media (max-width: 767px) {
+  .article-card {
+    padding: 30px 22px;
+    border-radius: 20px;
+    max-height: 72vh;
+  }
+  .prose p { font-size: 16px; }
+}
+
+
 
