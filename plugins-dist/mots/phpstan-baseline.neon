@@ -1,0 +1,14 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Instantiated class Spip\\Afficher\\Minipage\\Admin not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: action/editer_groupe_mots.php
+
+		-
+			message: '#^Instantiated class Spip\\Afficher\\Minipage\\Admin not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: action/editer_mot.php
+

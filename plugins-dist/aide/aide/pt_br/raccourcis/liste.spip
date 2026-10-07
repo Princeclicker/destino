@@ -1,0 +1,20 @@
+- Pode-se criar {{enumerações em vários níveis}} inserindo asteriscos após o traço de enumeração.
+
+<aide:code>
+-* O seu cavalo é:
+-** alazão;
+-** baio;
+-** preto;
+-* mas o meu coelho é:
+-** branco;
+-*** angorá;
+-*** ou de pelo curto.
+</aide:code>
+
+- Por fim, você pode criar {{listas numeradas}}, usando `#` em vez de asterisco:
+
+<aide:code>
+-# primeiro
+-# segundo
+-# terceiro
+</aide:code>

@@ -1,0 +1,56 @@
+{
+    "name": "spip/images",
+    "description": "Filtres de transformation d'image et de couleurs",
+    "license": "GPL-3.0-or-later",
+    "type": "spip-plugin",
+    "authors": [
+        {
+            "name": "Collectif SPIP",
+            "homepage": "https://discuter.spip.net/c/spip-dev/5",
+            "role": "Maintainer"
+        }
+    ],
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "symfony/deprecation-contracts": "^2.5"
+    },
+    "require-dev": {
+        "spip-league/qa-tools": "^1.0",
+        "spip-league/sdk": "^1.1"
+    },
+    "repositories": [
+        {
+            "name": "spip",
+            "type": "composer",
+            "url": "https://get.spip.net/composer"
+        }
+    ],
+    "autoload-dev": {
+        "psr-4": {
+            "Spip\\Test\\Plugin\\Images\\": "tests/"
+        },
+        "files": [
+            "vendor/spip-league/sdk/src/Stub/functions_autoloading.php",
+            "vendor/spip-league/sdk/src/Stub/functions_debug.php",
+            "vendor/spip-league/sdk/src/Stub/functions_filesystem.php",
+            "vendor/spip-league/sdk/src/Stub/functions_i18n.php",
+            "vendor/spip-league/sdk/src/Stub/functions_image_processing.php",
+            "vendor/spip-league/sdk/src/Stub/functions_logger.php",
+            "vendor/spip-league/sdk/src/Stub/functions_path.php",
+            "vendor/spip-league/sdk/src/Stub/functions_text_processing.php"
+        ]
+    },
+    "config": {
+        "platform": {
+            "php": "7.4.33"
+        }
+    },
+    "scripts": {
+        "analyse": "phpstan --memory-limit=1G",
+        "baseline": "phpstan --memory-limit=1G --generate-baseline --allow-empty-baseline",
+        "check-cs": "ecs check --ansi",
+        "fix-cs": "ecs check --fix --ansi",
+        "rector": "rector process --ansi",
+        "rector-dry-run": "rector process --dry-run --ansi"
+    }
+}

@@ -1,0 +1,20 @@
+- Pode criar {{enumerações aninhadas}} ao incluir asteriscos após o traço de enumeração.
+
+<aide:code>
+-* O teu cavalo é:
+-** alazão;
+-** baio;
+-** preto;
+-* mas o meu coelho é:
+-** branco;
+-*** angorá;
+-*** ou de pelo curto.
+</aide:code>
+
+- Por fim, pode criar {{listas numeradas}}, ao usar `#` em vez do asterisco:
+
+<aide:code>
+-# primeiro
+-# segundo
+-# terceiro
+</aide:code>

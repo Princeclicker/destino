@@ -1,0 +1,7 @@
+/.phpunit.cache
+/build/
+/composer.lock
+/composer.phar
+/phpstan.neon
+/phpunit.xml
+/vendor/

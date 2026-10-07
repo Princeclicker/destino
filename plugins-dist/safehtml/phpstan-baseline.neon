@@ -1,0 +1,8 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Call to an undefined method Textwheel\\Texte\\Collecteur\\MetasMicroData\:\:collecteur\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/Texte/Collecteur/MetasMicroData.php
+

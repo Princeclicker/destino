@@ -1,0 +1,8 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Function inc_sauvegarder_dist\(\) should return bool but return statement is missing\.$#'
+			identifier: return.missing
+			count: 1
+			path: inc/sauvegarder.php
+

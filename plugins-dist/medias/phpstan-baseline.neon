@@ -1,0 +1,56 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Instantiated class Spip\\Archives\\SpipArchives not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: action/ajouter_documents.php
+
+		-
+			message: '#^Function supprimer_lien_document\(\) should return bool but return statement is missing\.$#'
+			identifier: return.missing
+			count: 1
+			path: action/dissocier_document.php
+
+		-
+			message: '#^Function action_tourner_post invoked with 1 parameter, 2 required\.$#'
+			identifier: arguments.count
+			count: 1
+			path: action/tourner.php
+
+		-
+			message: '#^Function erreur_upload_trop_gros\(\) has invalid return type never\.$#'
+			identifier: class.notFound
+			count: 1
+			path: inc/getdocument.php
+
+		-
+			message: '#^Function accepte_fichier_upload\(\) should return bool\|int but return statement is missing\.$#'
+			identifier: return.missing
+			count: 1
+			path: inc/joindre_document.php
+
+		-
+			message: '#^Instantiated class Spip\\Archives\\SpipArchives not found\.$#'
+			identifier: class.notFound
+			count: 2
+			path: inc/joindre_document.php
+
+		-
+			message: '#^Function autoriser_orphelins_supprimer_dist\(\) should return bool but return statement is missing\.$#'
+			identifier: return.missing
+			count: 1
+			path: medias_autoriser.php
+
+		-
+			message: '#^Function generer_generer_url_arg not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: medias_fonctions.php
+
+		-
+			message: '#^Function spip_securise_valeur_env_modele not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: medias_fonctions.php
+

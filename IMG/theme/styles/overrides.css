@@ -1,0 +1,284 @@
+/* overrides.css - Destino rebrand layer on top of the GoWilds theme.
+
+   This file is the only place the rebrand needs to be reverted or re-tweaked.
+
+   1. Palette
+      GoWilds colours were remapped inside style.css with exact substitutions
+      (hex plus the matching rgb()/rgba() forms). Original -> Destino:
+
+        #1C231F headings, body text      -> #003B73  navy
+        #1D231F nav links, sticky header -> #003B73  navy
+        #101311 dark panel background    -> #003B73  navy
+        #272C28 .black-dark-bg           -> #003B73  navy
+        #63AB45 primary accent, buttons  -> #54B948  bright green
+        #F7921E secondary accent, icons  -> #006B68  dark teal
+        #F7451E "best" badge             -> #006B68  dark teal
+        #0B3D2C placeholder text         -> #006B68  dark teal
+
+      Greys (#484848, #868686, #B1B6B3, #ECECEC, #FFF, #000 ...) were left
+      untouched so the theme keeps its neutral surfaces and contrast.
+
+   2. Active nav item
+      This SPIP build does not evaluate [...]...[/] conditional blocks or
+      <B_x condition>, so the active state is keyed off data-rub on <body>,
+      which each page template passes as its section id (0 = home).
+      Pure CSS attribute selectors: no JS, no template conditionals. */
+
+  body[data-rub="0"]   .main-menu .navigation li a[href$="/"],
+  body[data-rub="58"] .main-menu .navigation li a[href*="rubrique58"],
+  body[data-rub="59"] .main-menu .navigation li a[href*="rubrique59"],
+  body[data-rub="60"] .main-menu .navigation li a[href*="rubrique60"],
+  body[data-rub="61"] .main-menu .navigation li a[href*="rubrique61"],
+  body[data-rub="62"] .main-menu .navigation li a[href*="rubrique62"] { color: #54b948; }
+
+  /* 3. Destino logo sizing.
+     IMG/theme/images/logo-black.png and logo-white.png were regenerated from
+     IMG/destino-logo.png: white background keyed out to alpha, artwork
+     cropped to its bounding box, saved at 189x144.
+
+     The Destino lockup is stacked (1.31:1) while the GoWilds header slot was
+     a wide 4:1 wordmark, and the theme has no .brand-logo sizing rule at all,
+     so the images would otherwise render at natural size and blow out the
+     header. Max-height keeps the header at its current height, because the
+     header is content-driven and the previous logos were 48-50px tall. */
+
+  .brand-logo img,
+  .footer-logo img {
+    max-height: 48px;
+    width: auto;
+    height: auto;
+    display: block;
+  }
+
+  /* Small breathing room on the left of the header logo. */
+  .brand-logo img { margin-left: 10px; }
+
+  .footer-logo img { max-height: 46px; }
+
+  /* 6. Page gutters: the whole page is inset 80px on the left and the right.
+
+     <body> is itself .page-wrapper, so padding here moves every section with
+     it, including the hero slider, the coloured CTA bands and the footer.
+
+     Desktop only. On a 375px phone 80px either side would leave 215px of
+     content, so small screens keep the full width.
+
+     Safe to do this way: bootstrap sets box-sizing:border-box globally so the
+     padding cannot introduce a horizontal scrollbar, body already has
+     overflow-x:hidden, the only 100vw in the theme is the fixed preloader
+     (viewport-relative, unaffected), and the theme uses no -50% full-bleed
+     width hacks. */
+  @media (min-width: 992px) {
+    body { padding-left: 80px; padding-right: 80px; }
+
+    /* Sections that must keep running edge to edge. Each cancels the body
+       padding with matching negative margins, so the background reaches the
+       window edge. Their inner .container is centred inside the widened
+       section and therefore lands in exactly the same place as every other
+       section's container, so no inner padding is needed. */
+    .hero-section,
+    section.page-banner,
+    section.cta-bg,
+    section.contact-page-map,
+    section.testimonial-section.bleed-full,
+    footer.main-footer {
+      margin-left: -80px;
+      margin-right: -80px;
+    }
+  }
+
+  /* 4. Keyboard accessibility: skip link */
+  .skip-link { position: absolute; left: -9999px; top: 0; }
+  .skip-link:focus {
+  	left: 8px; top: 8px; z-index: 9999;
+  	background: #fff; color: #003b73; padding: 10px 14px; border-radius: 4px;
+  }
+
+  /* 5. Hover effects for cards and images.
+
+     The GoWilds theme only changes border colours and overlay opacity on
+     hover, so everything below is additive. It is deliberately restrained:
+     short transitions, small offsets, no layout shift, and the brand navy is
+     only used in the shadows so the effect stays on-palette. */
+
+  /* Image zoom. The wrapper needs overflow:hidden or the zoom bleeds out.
+     .gallery-img and .place-img already set it in style.css; .post-thumbnail
+     and .member-img did not, so they are added here. */
+  .post-thumbnail,
+  .member-img { overflow: hidden; }
+
+  .gallery-img img,
+  .place-img img,
+  .post-thumbnail img,
+  .member-img img {
+    transition: transform .55s cubic-bezier(.7, 0, .3, 1);
+    will-change: transform;
+  }
+
+  .single-gallery-item:hover .gallery-img img,
+  .single-place-item-two:hover .place-img img,
+  .single-blog-post-three:hover .post-thumbnail img,
+  .single-blog-post-four:hover .post-thumbnail img,
+  .blog-post:hover .post-thumbnail img,
+  .single-team-item:hover .member-img img {
+    transform: scale(1.08);
+  }
+
+  /* Card lift with a navy-tinted shadow. */
+  .single-blog-post-three,
+  .single-blog-post-four,
+  .single-team-item,
+  .single-counter-item-two,
+  .single-info-item-two,
+  .contact-info-item,
+  .single-features-list,
+  .single-cta-item,
+  .gw-testimonial-item-two {
+    transition: transform .35s ease, box-shadow .35s ease;
+  }
+
+  .single-blog-post-three:hover,
+  .single-blog-post-four:hover,
+  .single-team-item:hover,
+  .single-counter-item-two:hover,
+  .single-info-item-two:hover,
+  .single-contact-info-item:hover,
+  .contact-info-item:hover,
+  .single-features-list:hover,
+  .single-cta-item:hover,
+  .gw-testimonial-item-two:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 34px rgba(0, 59, 115, .14);
+  }
+
+  /* Partner logos: muted by default, full colour on hover. */
+  .single-partner-item img {
+    filter: grayscale(1);
+    opacity: .6;
+    transition: filter .35s ease, opacity .35s ease, transform .35s ease;
+  }
+
+  .single-partner-item:hover img {
+    filter: grayscale(0);
+    opacity: 1;
+    transform: scale(1.06);
+  }
+
+  /* Gallery items: a touch brighter under the existing hover overlay. */
+  .single-gallery-item:hover .gallery-img img {
+    filter: brightness(1.08);
+  }
+
+  /* Icon buttons on cards pick up the teal accent. */
+  .single-gallery-item:hover .gallery-img .icon-btn,
+  .single-place-item-two:hover .place-content .icon-btn,
+  .single-blog-post-four:hover .post-thumbnail .icon-btn {
+    background-color: #006b68;
+    border-color: #006b68;
+    color: #fff;
+  }
+
+  /* Respect users who ask for less motion. */
+  @media (prefers-reduced-motion: reduce) {
+    .gallery-img img,
+    .place-img img,
+    .post-thumbnail img,
+    .member-img img,
+    .single-partner-item img,
+    .single-blog-post-three,
+    .single-blog-post-four,
+    .single-team-item,
+    .single-counter-item-two,
+    .single-info-item-two,
+    .contact-info-item,
+    .single-features-list,
+    .single-cta-item,
+    .gw-testimonial-item-two {
+      transition: none;
+    }
+
+    .single-gallery-item:hover .gallery-img img,
+    .single-place-item-two:hover .place-img img,
+    .single-blog-post-three:hover .post-thumbnail img,
+    .single-blog-post-four:hover .post-thumbnail img,
+    .blog-post:hover .post-thumbnail img,
+    .single-team-item:hover .member-img img,
+    .single-partner-item:hover img,
+    .single-blog-post-three:hover,
+    .single-blog-post-four:hover,
+    .single-team-item:hover,
+    .single-counter-item-two:hover,
+    .single-info-item-two:hover,
+    .contact-info-item:hover,
+    .single-features-list:hover,
+    .single-cta-item:hover,
+    .gw-testimonial-item-two:hover {
+      transform: none;
+    }
+  }
+
+  /* 7. About Us testimonial photo bleeds to the left window edge.
+
+     GoWilds already pulls this photo out of its column: style.css:3733 sets
+     margin-left:-44% on .testimonial-one_image-box, so the box overhangs to the
+     left. It just stops short of the edge because of the container gutter, and
+     style.css:3741 caps the img at max-width:753px on viewports over 1600px
+     wide. Both are replaced here.
+
+     Above 1200px the container is a fixed 1140px, so the photo column's
+     content box starts at (100vw - 1140px)/2 + 15px. Cancelling exactly that
+     puts the photo's left edge at 0 while its right edge stays where GoWilds
+     put it, which keeps the original 15px gap before the quote column intact
+     and the quotes themselves unmoved.
+
+     Scoped to >=1200px on purpose: that is where the side-by-side col-xl-5 /
+     col-xl-7 layout applies. Below 1200px the column is col-lg-12 (full
+     width) and GoWilds already resets the margin to 0. */
+  @media (min-width: 1200px) {
+    .testimonial-one_image-box {
+      margin-left: calc((1140px - 100vw) / 2 - 15px);
+    }
+
+    .testimonial-one_image-box img {
+      width: 100%;
+      max-width: none;
+      height: auto;
+      display: block;
+    }
+  }
+
+  /* 8. Stop the gallery sections dragging the footer up over themselves.
+
+     body-58 through body-62 all end with:
+
+         <section class="gallery-section mbm-150">
+           <div class="container-fluid">
+             <div class="slider-active-5-item"> ...small gallery pictures...
+
+     and style.css defines .mbm-150 { margin-bottom: -130px }. That negative
+     margin pulled the footer 130px back over the gallery slider, so the footer
+     CTA ("Need Any Support?" / "Ready to Get Started?") ended up sitting
+     behind the small pictures instead of below them.
+
+     The 130px overlap only ever makes sense where a following section is
+     meant to slide under a taller one, which is not the case here, so the
+     margin is zeroed and replaced with ordinary bottom spacing matching the
+     pb-100 the homepage gallery uses. */
+  section.gallery-section.mbm-150 {
+    margin-bottom: 0;
+    padding-bottom: 100px;
+  }
+
+
+/* Footer must not be affected by per-page section margins (e.g. .mbm-150). */
+.main-footer {
+  margin-top: 0 !important;
+  position: relative;
+  z-index: 1;
+}
+
+
+.main-footer.gray-bg { background-color: #EEF1F5; }
+
+
+

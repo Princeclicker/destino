@@ -1,0 +1,38 @@
+Criar tabelas simples no SPIP é feito com linhas em que as "células" são separadas pelo caracter `|` ({pipe}, um traço vertical), as linhas também começam e terminam com traços verticais. É obrigatório deixar linhas em branco antes e depois da tabela.
+
+<aide:code>
+| {{Nome}} | {{Sobrenome}} | {{Idade}} |
+| Mário | Assis | 23 ans |
+| Marcondes | | desconhecida |
+| Felipe | Borges | 46 anos |
+| Isabel | Bastos | 4 meses |
+</aide:code>
+
+Repare que todas as entradas da primeira linha estão em negrito. O SPIP identifica dessa maneira que se trata de uma linha de título, e atribui uma apresentação diferente das outras linhas. A presença de uma linha assim não é obrigatória.
+
+{{{Legenda e resumo}}}
+
+Pode-se também incluir uma legenda e um resumo na tabela. Estas duas informações são opcionais mas bem importantes para tornar a tabela acessível a pessoas com problemas de visão; o resumo dá uma ideia melhor do seu conteúdo. Estas informações são especificadas entre traços verticais duplos `||` antes da tabela.
+
+<aide:code>
+||Legenda|Resumo||
+| {{Nome}} | {{Data de nascimento}} | {{Cidade}} |
+| Tiago | 5/10/1970 | Brasília |
+| Clara | 12/2/1975 | Petrópolis |
+| Martinho | 1/31/1957 | Campina Grande |
+| Maria | 23/12/1948 | Manaus |
+</aide:code>
+
+Pode-se especificar apenas uma dessas informações mas, para indicar apenas o resumo, precisará inserir antes um traço vertical simples: `|| | Resumo ||`
+
+{{{Fusão de células}}}
+
+Também é possível fundir uma célula com outras, resumindo o seu conteúdo a `|<|` para fundir com a célula à esquerda; ou a `|^|` para fundir com a célula acima.
+
+<aide:code>
+||Tabela com fusão| Atalho de fusão||
+| {{Coluna 1}} | {{Coluna 2}} | {{Coluna 3}} |
+| Linha 1 | L1C2 e L1C3 |<|
+| Linha 2 | L2C2 e L3C2|L2C3|
+| Linha 3 |^| L3C3 |
+</aide:code>

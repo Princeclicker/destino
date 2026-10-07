@@ -1,0 +1,94 @@
+Apresentamos aqui os atalhos tipográficos mais comuns e os mais simples.
+
+Estes atalhos atendem à grande maioria das necessidades e permitem publicar online tão facilmente quanto escrever um e-mail.
+
+Os outros capítulos detalham possibilidades mais avançadas e complexas destes atalhos, permitindo refinar ainda mais o controle da formatação dos textos.
+
+
+{{{Criar parágrafos}}}
+
+Para criar parágrafos, basta deixar uma linha em branco, um pouco como separamos os parágrafos num e-mail ("pular" uma linha).
+
+O fato de apenas "mudar de linha" (retorno de carro), sem separar os dois parágrafos por uma linha em branco, não é suficiente para provocar uma mudança de parágrafo.
+
+Pode deixar várias linhas seguidas em branco sem que isso altere a apresentação; as linhas extras serão ignoradas na exibição.
+
+
+{{{Mudar de linha}}}
+
+Na tipografia clássica, a simples quebra de linha é pouco usada (limitada essencialmente à poesia; ou para apresentar um endereço postal). Não deve ser usada para formar um novo parágrafo.
+
+A quebra de linha é automática, mas pode ser tornada explicita ao digitar `_ ` (o caracter de sublinhado ou {underscore}, seguido de um espaço) no início da linha, para evidenciar a intenção voluntária dessa quebra para os outros redatores do texto. O resultado na exibição é igual.
+
+<aide:code>
+Eu sou
+uma quebra de linha normal e, a seguir,
+_ uma quebra linha explícita.
+
+Eu sou um novo parágrafo, após uma linha em branco.
+</aide:code>
+
+
+{{{Negrito e itálico}}}
+
+Indica-se o texto {em itálico} colocando-o entre chaves simples.
+Indica-se o texto {{em negrito}} colocando-o entre chaves duplas.
+
+<aide:code>
+Texto {em itálico} e texto {{em negrito}}...
+</aide:code>
+
+{{{Entretítulos}}}
+
+Os entretítulos são títulos secundários no interior de um texto, que permitem indicar a sua estrutura. No SPIP, são indicados envolvendo o texto entre chaves triplas.
+
+<aide:code>
+{{{Um título de seção}}}
+</aide:code>
+
+{{{Linha de separação horizontal}}}
+
+Você pode incluir uma linha de separação horizontal usando pelo menos quatro traços numa linha nova, como `----`.
+
+<aide:code>
+----
+</aide:code>
+
+
+[puces<-]
+
+{{{Inserir um marcador}}}
+
+Pode inserir um marcador (ou ponto lista) no início da linha, no SPIP: basta iniciar uma nova linha começada por um traço `-`.
+
+Nota: aqui, uma simples quebra de linha é suficiente (pode-se fazer enumerações no mesmo parágrafo); mas, se saltar uma linha antes da linha começada por um traço, a linha em branco será exibida antes da enumeração.
+
+<aide:code>
+- O que importa eu lutar por uma má causa, se estou de boa fé?
+- E o que importa se estou de má fé se for por uma boa causa.
+(Jacques Prévert)
+</aide:code>
+
+Note que se trata de inserir um {marcador} e não [de criar uma lista->#aide-raccourcis-liste].
+
+
+{{{Travessão}}}
+
+O travessão é o sinal `—`, usado, por exemplo, em diálogos. Nem sempre é fácil de se obter, dependendo do layout de teclado usado. O SPIP oferece o atalho `--` para gerá-lo.
+
+<aide:code>
+Eu sou -- um travessão no fluxo do texto -- e, abaixo, num diálogo:
+-- Bom dia?
+-- Bom dia!
+</aide:code>
+
+
+{{{Tipografia francesa automática}}}
+
+O SPIP respeita automaticamente as principais regras de espaçamento da tipografia francesa. Espaços inquebráveis são inseridos antes dos caracteres `:`, `;`, `!`, `?`, assim como antes e depois das «aspas francesas».
+
+{Nota: esta funcionalidade só está ativa nos sites em que o idioma principal é o francês.}
+
+<aide:code>
+«Des cartes: pique; cœur; carreau! trèfle?»
+</aide:code>

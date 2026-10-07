@@ -1,0 +1,13 @@
+<paquet
+	prefix="plan"
+	version="4.1.7"
+	etat="stable"
+	compatibilite="[4.2.0;4.*]"
+	logo="prive/images/plan-xx.svg"
+	documentation="https://contrib.spip.net/4718"
+>
+	<nom>Plan du site dans l’espace privé</nom>
+	<auteur>Matthieu Marcillaud</auteur>
+	<credit lien="https://www.jstree.com/">Ivan Bozhanov (jstree)</credit>
+	<licence lien="https://spdx.org/licenses/GPL-3.0-or-later.html">GPL-3.0-or-later</licence>
+</paquet>

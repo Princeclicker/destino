@@ -1,0 +1,79 @@
+Um link hipertexto é definido com o código `[título->URL]`.
+
+<aide:code>
+O SPIP é uma iniciativa do [minirézo->https://www.spip.net/pt_rubrique254.html].
+</aide:code>
+
+O endereço do link pode ser um endereço absoluto (começando, como aqui, por `https://`), um endereço relativo (para outra página do mesmo site), um documento usando um protocolo da internet (`ftp://`...), um endereço de e-mail (`[->minirezo@rezo.net]`)...
+
+Pode exibir com todas as letras um link clicável na forma de um endereço URL, ao não indicar nada na parte dedicada ao título.
+
+<aide:code>
+[->https://pt.wikipedia.org/wiki/Camilo_Castelo_Branco]
+</aide:code>
+
+Note que, no caso de URLs muito longos, a exibição é truncada (para evitar degradar a sua interface gráfica), mas o link hipertexto apontará para o endereço correto.
+
+Por fim, um URL escrito diretamente também transforma-se automaticamente em link hipertexto (este não é truncado se for muito longo).
+
+<aide:code>
+https://pt.wikipedia.org/wiki/Camilo_Castelo_Branco
+</aide:code>
+
+
+[liensite<-]
+
+É possível especificar o idioma da página para a qual o link aponta, o que será exibido de acordo com o padrão dos navegadores. Para isso, deve-se colocar o código do idioma entre chavetas.
+
+<aide:code>
+[Um site em francês{fr}->https://www.exemplo.org]
+</aide:code>
+
+Isto é particularmente recomendado quando a página de destino não está no mesmo idioma do seu texto.
+
+Se quiser dar mais informações sobre o link sem alongar excessivamente a zona clicável, pode provocar a exibição de uma tooltip, inserindo o sinal `|` antes da seta, seguido do texto desejado:
+
+<aide:code>
+[ver aqui|Este link explicará tudo o que precisa saber->https://www.exemplo.org]
+</aide:code>
+
+
+{{{Links hipertexto no interior do site}}}
+
+Este mesmo sistema de links hipertexto facilita ainda a criação de links no interior do seu site. A única subtileza consiste em informar o {número} da matéria, da seção, ou de outro objeto editorial para o qual quer que o seu link aponte.
+
+Quando, por exemplo, visita uma matéria na área restrita, a coluna esquerda tem uma caixa indicando, em letras grandes, esse número.
+
+Esse é o número que deverá indicar no link hipertexto.
+
+{{Link para a matéria 342:}}
+
+<aide:code>
+- Link para [a matéria->342]
+- Link para [a matéria->art342]
+- Link para [a matéria->article 342]
+- Link para [->art342]
+</aide:code>
+
+Se nada for informado antes da seta, como em `[->art342]`, o título do objeto editorial, se existir, será usado automaticamente como texto do link.
+
+{{Link para a seção 12:}}
+
+<aide:code>
+- Link para [a seção->rub12]
+- Link para [a seção->rubrique 12]
+</aide:code>
+
+
+{{Autores, palavras-chave, sites, imagens, documentos, notas:}}
+<aide:code>
+- Link para [um autor->aut13] ou para [o mesmo autor->auteur13]
+- Link para [uma palavra-chave->mot32]
+- Link para [um site sindicado->site1]
+- Link para [um documento anexo->doc17] ou para [o mesmo documento->document17]
+- Link para [uma imagem->img13] ou para [a mesma imagem->image13]
+</aide:code>
+
+Aqui também, quando nada é especificado antes da "seta", como em `[->aut13]`, o SPIP inserirá automaticamente as informações necessárias. No caso de um documento anexo ou de uma imagem, se um título foi informado manualmente, é esse título que será exibido; senão, é o nome do próprio ficheiro que será usado.
+
+Os atalhos para mencionar o idioma e criar uma tooltip, explicados para os links externos, funcionam igualmente para os links internos.

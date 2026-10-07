@@ -1,0 +1,28 @@
+[(#REM)
+	rubrique.html - every published section.
+
+	Each section has a matching body file, included dynamically as
+	fond=body-ID_RUBRIQUE. Dynamic includes work in this SPIP build; the usual
+	conditional-block and B_x-if-loop forms do NOT, they report
+	"Undefined filter ==" and echo the source into the page.
+
+		body-58.html  About Us    GoWilds about.html
+		body-59.html  Services    GoWilds destination.html
+		body-60.html  Tours       GoWilds tour.html
+		body-61.html  Blog        GoWilds blog.html
+		body-62.html  Contact     GoWilds contact.html
+
+	Adding a section means adding body-ID.html for its new id, otherwise the
+	dynamic include fails.
+
+	Never put square brackets inside a REM comment in this project. The lexer
+	treats a bracket pair as a code delimiter and then echoes the whole comment
+	into the rendered page. HTML comments are not safe either, they are echoed
+	too, so REM is the only comment form that works here.
+)]
+
+<INCLURE{fond=_entete,niveau=rubrique,rub=#ID_RUBRIQUE,titre=#TITRE,description=#DESCRIPTIF}>
+
+<INCLURE{fond=body-#ID_RUBRIQUE}>
+
+<INCLURE{fond=_pied}>

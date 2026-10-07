@@ -1,0 +1,142 @@
+[(#REM)
+_pied.html - GoWilds footer, search modal, preloader and theme scripts.
+	Included at the end of every public template.
+
+The section markers below are plain HTML comments. They render
+	normally, so they are safe to leave in the output.
+
+	The closing delimiter below has to sit on its own line directly after
+	this text. This lexer runs a REM block to the next close-paren followed by
+	close-bracket, so everything up to that point is comment body and gets
+	dropped, while anything after it renders normally. Never write the
+	delimiter itself inside this comment - doing so ends the block early and
+	leaks the rest of the file onto the page.
+)]
+<!--====== Start CTA Section ======-->
+<section class="cta-bg overlay bg_cover pt-150 pb-150" style="background-image: url(IMG/theme/images/cta-bg2.jpg);">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xl-7 col-lg-8">
+                <!--=== CTA Content Box ===-->
+                <div class="cta-content-box text-white">
+                    <h2 class="mb-35">Ready to Discover Rwanda
+                        With Destino Access Hub?</h2>
+                    <a href="spip.php?rubrique58" class="main-btn secondary-btn">Request a Quote<i class="far fa-paper-plane"></i></a>
+                </div>
+            </div>
+            <div class="col-xl-5 col-lg-4">
+                <!--=== Play Box ===-->
+                <div class="play-box text-center">
+                    <a href="https://www.youtube.com/watch?v=ibuUmMhD2Pg" class="video-popup"><i class="fas fa-play"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!--====== End CTA Section ======-->
+<footer class="main-footer gray-bg">
+	<div class="container">
+		<!--=== Footer Widget ===-->
+		<div class="footer-widget-area pt-75 pb-0">
+			<div class="row" style="display:flex;flex-wrap:wrap;">
+				<div class="col-lg-4 col-md-6" style="display:flex;">
+					<div class="footer-widget about-company-widget" style="flex:1;">
+						<h4 class="widget-title">About</h4>
+						<div class="footer-content">
+							<p>Destino Access Hub Ltd is a Rwanda-based travel and access company connecting people with destinations, experiences and opportunities across Rwanda.</p>
+							</div>
+					</div>
+				</div>
+
+			<div class="col-lg-4 col-md-6" style="display:flex;padding-right:0;">
+				<div class="footer-widget service-nav-widget" style="flex:1;padding-left:50px;">
+						<h4 class="widget-title" style="width:65%;text-align:center;margin-left:-40px;">Explore</h4>
+						<div class="footer-content">
+							<ul class="footer-widget-nav" style="width:65%;columns:2;column-gap:5px;">
+								<li style="margin-bottom:2px;break-inside:avoid;"><a href="#URL_SITE_SPIP/">Home</a></li>
+								<li style="margin-bottom:2px;break-inside:avoid;"><a href="spip.php?rubrique58">About Us</a></li>
+								<li style="margin-bottom:2px;break-inside:avoid;"><a href="spip.php?rubrique60">Tour Packages</a></li>
+								<li style="margin-bottom:2px;break-inside:avoid;"><a href="spip.php?rubrique59">Destinations</a></li>
+								<li style="margin-bottom:2px;break-inside:avoid;"><a href="spip.php?rubrique61">Blog</a></li>
+								<li style="break-inside:avoid;"><a href="spip.php?rubrique62">Contact Us</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+
+			<div class="col-lg-4 col-md-6" style="display:flex;">
+				<div class="footer-widget" style="flex:1;">
+					<h4 class="widget-title">Contact &amp; Newsletter</h4>
+					<div class="footer-content">
+						<ul class="footer-widget-nav">
+							<li><i class="fas fa-map-marker-alt"></i> Kigali, Rwanda</li>
+							<li><i class="fas fa-phone-alt"></i> +250 786 362 004</li>
+							<li><i class="fas fa-envelope"></i> <a href="mailto:info@destinoaccesshub.com">info@destinoaccesshub.com</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<!--=== Footer Copyright ===-->
+		<div class="footer-copyright">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="footer-text">
+						<p>&copy; Destino Access Hub Ltd, All Right Reserved</p>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="footer-nav float-lg-end">
+						<ul>
+							<li><a href="#">Setting &amp; privacy</a></li>
+							<li><a href="#">Faqs</a></li>
+							<li><a href="#">Support</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!--====== End Footer ======-->
+<!-- End Contenet Area -->
+
+<!--====== Search Modal ======-->
+<div class="modal fade search-modal" id="search-modal">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<form action="spip.php?page=recherche" method="get">
+				<div class="form_group">
+					<input type="search" class="form_control" placeholder="Search here" name="recherche">
+					<label for="search-modal-input"><i class="far fa-search"></i></label>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<!--====== Preloader ======-->
+<div class="preloader" style="display:none;">
+	<div class="loader">
+		<div class="pre-shadow"></div>
+		<div class="pre-box"></div>
+	</div>
+</div>
+<a href="#" class="back-to-top" style="display:inline-block;"><i class="far fa-angle-up"></i></a>
+
+<!--====== Scripts ======-->
+<script src="IMG/theme/scripts/jquery.min.js?v=20261006b"></script>
+<script src="IMG/theme/scripts/popper.min.js?v=20261006b"></script>
+<script src="IMG/theme/scripts/bootstrap.min.js?v=20261006b"></script>
+<script src="IMG/theme/scripts/slick.min.js?v=20261006b"></script>
+<script src="IMG/theme/scripts/jquery.magnific-popup.min.js?v=20261006b"></script>
+<script src="IMG/theme/scripts/jquery.counterup.min.js?v=20261006b"></script>
+<script src="IMG/theme/scripts/jquery.waypoints.js?v=20261006b"></script>
+<script src="IMG/theme/scripts/jquery.nice-select.min.js?v=20261006b"></script>
+<script src="IMG/theme/scripts/jquery-ui.min.js?v=20261006b"></script>
+<script src="IMG/theme/scripts/wow.min.js?v=20261006b"></script>
+<script src="IMG/theme/scripts/theme.js?v=20261006b"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+O SPIP oferece diversos atalhos para exibir código de programação nas páginas.
+
+{{{Código em linha}}}
+
+O atalho `` `...` `` («backtick», como em Markdown) é usado para integrar código no fluxo do texto.
+
+<aide:code>
+A variável `$x = true;` é um booleano.
+</aide:code>
+
+----
+
+Alternativamente, há o atalho `<code>...</code>`.
+
+
+{{{Bloco de código}}}
+
+Para publicar extratos de código de programação com várias linhas, o backtick triplo é usado (como em Markdown). Permite preservar os afastamentos no início das linhas.
+
+<aide:code>
+```
+<ul>
+	<li>O único</li>
+</ul>
+```
+</aide:code>
+
+
+Pode-se especificar a linguagem de programação usada:
+
+<aide:code>
+```html
+<h1>Título</h1>
+```
+</aide:code>
+
+----
+
+Alternativamente, existe o atalho `<cadre>...</cadre>` ou `<cadre class='html’>...</cadre>`.
+
+
+{{{Contornar os atalhos SPIP}}}
+
+Em alguns casos, pode ser necessário indicar ao SPIP que certas partes de um documento não devem ser "tratadas" pelo filtro de atalhos tipográficos: quando, por exemplo, você quer exibir a sintaxe de um atalho. Para isso, envolva o conteúdo com a tag `<HTML>...</HTML>`.
+
+<aide:code>
+Este {{texto}} foi formatado; perfeito!
+<HTML>Este {{texto}} fica assim; atenção!</HTML>
+</aide:code>
+
+Note a ausência de espaços antes do ponto e vírgula e do ponto de exclamação.

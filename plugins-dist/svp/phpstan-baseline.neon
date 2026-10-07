@@ -1,0 +1,44 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Call to function unset\(\) contains undefined variable \$conflit\.$#'
+			identifier: unset.variable
+			count: 1
+			path: inc/svp_decider.php
+
+		-
+			message: '#^Call to function unset\(\) contains undefined variable \$erreur\.$#'
+			identifier: unset.variable
+			count: 1
+			path: inc/svp_decider.php
+
+		-
+			message: '#^Call to function unset\(\) contains undefined variable \$id\.$#'
+			identifier: unset.variable
+			count: 1
+			path: inc/svp_decider.php
+
+		-
+			message: '#^Call to function unset\(\) contains undefined variable \$present\.$#'
+			identifier: unset.variable
+			count: 1
+			path: inc/svp_decider.php
+
+		-
+			message: '#^Instantiated class Spip\\Texte\\Collecteur\\Multis not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: plugins/preparer_sql_plugin.php
+
+		-
+			message: '#^Instantiated class Spip\\Archives\\SpipArchives not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: teleporter/http_deballe_tgz.php
+
+		-
+			message: '#^Instantiated class Spip\\Archives\\SpipArchives not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: teleporter/http_deballe_zip.php
+

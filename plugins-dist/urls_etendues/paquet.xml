@@ -1,0 +1,24 @@
+<paquet
+	prefix="urls"
+	version="4.2.5"
+	etat="stable"
+	compatibilite="[4.4.0-dev;4.*]"
+	logo="prive/themes/spip/images/url-32.png"
+	schema="2.0.1"
+>
+	<nom>Urls Etendues</nom>
+	<auteur>Collectif SPIP</auteur>
+	<licence lien="https://spdx.org/licenses/GPL-3.0-or-later.html">GPL-3.0-or-later</licence>
+
+	<pipeline nom="autoriser" inclure="urls_autoriser.php" />
+	<pipeline nom="declarer_tables_auxiliaires" inclure="base/urls.php" />
+	<pipeline nom="declarer_tables_interfaces" inclure="base/urls.php" />
+	<pipeline nom="optimiser_base_disparus" inclure="urls_pipeline.php" />
+	<pipeline nom="arbo_creer_chaine_url" action="arbo_creer_chaine_url" inclure="urls/arbo.php" />
+	<pipeline nom="propres_creer_chaine_url" action="propres_creer_chaine_url" inclure="urls/propres.php" />
+	<pipeline nom="afficher_fiche_objet" inclure="urls_pipeline.php" />
+	<pipeline nom="ieconfig_metas" inclure="urls_ieconfig.php" />
+
+	<menu nom="configurer_urls" titre="urls:icone_configurer_urls" parent="menu_configuration" position="-1" icone="images/url-16.png" />
+	<menu nom="controler_urls" titre="urls:titre_gestion_des_urls" parent="menu_publication" position="-1" icone="images/url-16.png" />
+</paquet>

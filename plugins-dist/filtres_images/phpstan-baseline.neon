@@ -1,0 +1,43 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Function _image_ecrire_tag not found\.$#'
+			identifier: function.notFound
+			count: 16
+			path: filtres/images_transforme.php
+
+		-
+			message: '#^Function _image_tag_changer_taille not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: filtres/images_transforme.php
+
+		-
+			message: '#^Function erreur_squelette not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: filtres/images_transforme.php
+
+		-
+			message: '#^Function hauteur not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: filtres/images_transforme.php
+
+		-
+			message: '#^Function largeur not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: filtres/images_transforme.php
+
+		-
+			message: '#^Function couleur_html_to_hex not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: filtres/images_typo.php
+
+		-
+			message: '#^Function init_mb_string not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: filtres/images_typo.php

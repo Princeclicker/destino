@@ -1,0 +1,150 @@
+[(#REM)
+_entete.html — doctype, <head>, header and primary navigation.
+	Included by sommaire.html, rubrique.html, article.html and 404.html.
+
+	Callers pass: niveau=sommaire|rubrique|article (plus titre, description).
+
+	Theme: GoWilds (destn-2/gowilds) copied to IMG/theme/.
+	Nav order is Home, Services, Tours, Blog, About Us, Contact, which maps to
+	section ids 59, 60, 61, 58, 62 — deliberately not ascending id order, so the
+	links are written explicitly instead of looping the sections.
+	Active state uses #ID_RUBRIQUE, which is the current section on rubrique and
+	article pages and 0 on the home page.
+)]
+<!DOCTYPE html>
+<html dir="#LANG_DIR" lang="#LANG" class="[(#LANG_DIR)][ (#LANG)]">
+<head>
+	<meta charset="#CHARSET" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>[(#ENV{titre})]<INCLURE{fond=titre-#ENV{rub}}> - Destino Access Hub Ltd</title>
+	<meta name="description" content="[(#ENV{description}|textebrut|couper{155}|attribut_html)]" />
+	<meta name="generator" content="SPIP (#SPIP_VERSION|header_silencieux)" />
+	<link rel="icon" href="IMG/theme/images/favicon.png" type="image/png" />
+	<link rel="stylesheet" href="IMG/theme/styles/css2.css?v=20261006b" type="text/css" />
+	<link rel="stylesheet" href="IMG/theme/styles/flaticon_gowilds.css?v=20261006b" type="text/css" />
+	<link rel="stylesheet" href="IMG/theme/styles/all.min.css?v=20261006b" type="text/css" />
+	<link rel="stylesheet" href="IMG/theme/styles/bootstrap.min.css?v=20261006b" type="text/css" />
+	<link rel="stylesheet" href="IMG/theme/styles/magnific-popup.css?v=20261006b" type="text/css" />
+	<link rel="stylesheet" href="IMG/theme/styles/slick.css?v=20261006b" type="text/css" />
+	<link rel="stylesheet" href="IMG/theme/styles/jquery-ui.min.css?v=20261006b" type="text/css" />
+	<link rel="stylesheet" href="IMG/theme/styles/nice-select.css?v=20261006b" type="text/css" />
+	<link rel="stylesheet" href="IMG/theme/styles/animate.css?v=20261006b" type="text/css" />
+	<link rel="stylesheet" href="IMG/theme/styles/default.css?v=20261006b" type="text/css" />
+	<link rel="stylesheet" href="IMG/theme/styles/style.css?v=20261006b" type="text/css" />
+	<link rel="stylesheet" href="IMG/theme/styles/overrides.css?v=20261006e" type="text/css" />
+</head>
+
+<body class="page-wrapper[ (#ENV{variante}|trim)] page[-(#ENV{niveau})]" data-rub="[(#ENV{rub})]">
+
+<a class="skip-link" href="#contenu">Skip to content</a>
+
+<!--====== Start Header ======-->
+<header class="header-area header-three">
+	<!--====== Header Top Bar ======-->
+	<div class="header-top-bar pt-30 pb-30">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xl-3 d-none d-xl-block">
+					<div class="site-brading">
+						<a href="#URL_SITE_SPIP/" class="brand-logo"><img src="IMG/theme/images/logo-black.png" alt="Destino Access Hub Ltd" style="height:56px;width:auto" /></a>
+					</div>
+				</div>
+				<div class="col-xl-9 col-lg-12">
+					<div class="information-wrapper">
+						<div class="row">
+							<div class="col-lg-4">
+								<div class="single-info-item-two">
+									<div class="inner-info">
+										<div class="icon"><i class="far fa-map-marker-alt"></i></div>
+										<div class="info">
+											<span class="title">Office Address</span>
+											<h5>Kigali, Rwanda</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4">
+								<div class="single-info-item-two">
+									<div class="inner-info">
+										<div class="icon"><i class="far fa-envelope"></i></div>
+										<div class="info">
+											<span class="title">Email Address</span>
+											<h5><a href="mailto:info@destinoaccesshub.com">info@destinoaccesshub.com</a></h5>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4">
+								<div class="single-info-item-two">
+									<div class="inner-info">
+										<div class="icon"><i class="far fa-phone-plus"></i></div>
+										<div class="info">
+											<span class="title">Drop a Line</span>
+											<h5><a href="tel:+250786362004">+250 786 362 004</a></h5>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--====== Header Navigation ======-->
+	<div class="header-navigation navigation-white breakpoint-on sticky">
+		<div class="nav-overlay"></div>
+		<div class="container-fluid">
+			<div class="primary-menu black-bg">
+				<!--====== Site Branding ======-->
+				<div class="site-brading d-block d-xl-none">
+					<a href="#URL_SITE_SPIP/" class="brand-logo"><img src="IMG/theme/images/logo-white.png" alt="Destino Access Hub Ltd" style="height:56px;width:auto" /></a>
+				</div>
+				<!--====== Nav Menu ======-->
+				<div class="nav-menu">
+					<!--====== Site Branding ======-->
+					<div class="mobile-logo mb-30 d-block d-xl-none">
+						<a href="#URL_SITE_SPIP/" class="brand-logo"><img src="IMG/theme/images/logo-black.png" alt="Destino Access Hub Ltd" style="height:56px;width:auto" /></a>
+					</div>
+					<!--=== Nav Search ===-->
+					<div class="nav-search mb-30 d-block d-xl-none">
+						<form action="spip.php?page=recherche" method="get">
+							<div class="form_group">
+								<input type="text" class="form_control" placeholder="Search Here" name="recherche" required>
+								<button class="search-btn" type="submit"><i class="fas fa-search"></i></button>
+							</div>
+						</form>
+					</div>
+					<!--====== Main Menu ======-->
+					<nav class="main-menu" aria-label="Main navigation">
+						<ul class="navigation clearfix">
+							<li><a href="#URL_SITE_SPIP/">Home</a></li>
+							<li><a href="spip.php?rubrique58">About Us</a></li>
+							<li><a href="spip.php?rubrique60">Tour Packages</a></li>
+							<li><a href="spip.php?rubrique59">Destinations</a></li>
+							<li><a href="spip.php?rubrique61">Blog</a></li>
+							<li><a href="spip.php?rubrique62">Contact Us</a></li>
+						</ul>
+					</nav>
+					<!--====== Menu Button (mobile) ======-->
+					<div class="menu-button mt-40 d-xl-none">
+						<a href="spip.php?rubrique62" class="main-btn secondary-btn">Request a Quote<i class="fas fa-paper-plane"></i></a>
+					</div>
+				</div>
+				<!--====== Nav Right Item ======-->
+				<div class="nav-right-item">
+					<div class="menu-button d-xl-block d-none">
+						<a href="spip.php?rubrique62" class="main-btn primary-btn">Request a Quote<i class="fas fa-paper-plane"></i></a>
+					</div>
+					<div class="navbar-toggler">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<!--====== End Header ======-->

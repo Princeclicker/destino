@@ -1,0 +1,18 @@
+<paquet
+	prefix="safehtml"
+	version="3.1.7"
+	etat="stable"
+	compatibilite="[4.2.0;4.*]"
+	logo="images/safehtml-32.png"
+	documentation="http://www.ohloh.net/p/safehtml"
+>
+	<nom>SafeHTML</nom>
+	<auteur>Collectif SPIP</auteur>
+	<credit>Roman Ivanov</credit>
+	<credit>Pixel-Apes</credit>
+	<credit>JetStyle</credit>
+	<credit lien="https://bitbucket.org/wackowiki/wackowiki/src/master/wacko/lib/">https://wackowiki.org/doc/Dev/Projects/SafeHTML</credit>
+	<licence lien="https://spdx.org/licenses/GPL-3.0-or-later.html">GPL-3.0-or-later</licence>
+
+	<procure nom="safehtml" version="1.3.12" />
+</paquet>

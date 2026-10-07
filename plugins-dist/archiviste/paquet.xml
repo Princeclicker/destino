@@ -1,0 +1,12 @@
+<paquet
+	prefix="archiviste"
+	version="2.2.6"
+	etat="stable"
+	compatibilite="[4.2.0;4.*]"
+	logo="prive/themes/spip/images/archiviste.svg"
+	documentation="https://git.spip.net/spip/archiviste/src/branch/master/README.md"
+>
+	<nom>Archiviste</nom>
+	<auteur>Collectif SPIP</auteur>
+	<licence lien="https://spdx.org/licenses/GPL-3.0-or-later.html">GPL-3.0-or-later</licence>
+</paquet>

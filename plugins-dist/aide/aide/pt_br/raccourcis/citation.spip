@@ -1,0 +1,10 @@
+Para citar um trecho de texto, o SPIP oferece o atalho `<quote>...</quote>`.
+
+É útil, por exemplo, para citações, extratos de discursos ou de matérias, para citar um trecho de uma mensagem numa resposta de fórum.
+
+<aide:code>
+<quote>
+<quote>O SPIP é mesmo bom.</quote>
+Olá, concordo plenamente :-)
+</quote>
+</aide:code>

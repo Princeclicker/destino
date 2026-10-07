@@ -1,0 +1,25 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Function neutraliser_modeles_publics not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: forum_fonctions.php
+
+		-
+			message: '#^Function trigger_deprecation not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: forum_fonctions.php
+
+		-
+			message: '#^Instantiated class Spip\\Texte\\Collecteur\\HtmlTag not found\.$#'
+			identifier: class.notFound
+			count: 2
+			path: forum_fonctions.php
+
+		-
+			message: '#^Function mot_associer not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: inc/forum_insert.php

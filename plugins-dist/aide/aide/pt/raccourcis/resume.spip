@@ -1,0 +1,28 @@
+<aide:code>
+{{{ Um entretítulo }}}
+
+Texto em {itálico} e {{negrito}} ou uma {{ {combinação de ambos} }}.
+Uma quebra de linha com [um link externo->https://www.spip.net] e [um link interno->art12] com um título automático [->rubrique10].
+
+Outro parágrafo com [[Uma nota de rodapé]] e um termo de [?glossário].
+
+-* Uma lista
+-* Uma lista
+-** Sub-elemento da lista
+
+-# Uma lista ordenada
+-# Uma lista ordenada
+-## Sub-elemento da lista ordenada
+
+Um separador
+----
+
+Uma tabela
+| {{ Lugar }} | {{ Ação }} |
+| Nazaré | Surfar |
+| Coimbra | Estudar |
+
+A definição de uma âncora [direto<-] com um link para lá chegar [->#direto].
+
+<quote>Uma citação</quote>
+</aide:code>

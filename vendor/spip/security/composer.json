@@ -1,0 +1,27 @@
+{
+    "name": "spip/security",
+    "description": "Protection du site par blocage de certaines attaques",
+    "license": "GPL-3.0-only",
+    "authors": [
+        {
+            "name": "Collectif SPIP"
+        }
+    ],
+    "require": {
+        "php": "^5.4 || ^7 || ^8"
+    },
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+        "spip/coding-standards": "^1.2"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.6.x-dev"
+        }
+    }
+}

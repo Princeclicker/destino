@@ -1,0 +1,7 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Function signer_filtres_squelettes not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: compresseur_pipeline.php

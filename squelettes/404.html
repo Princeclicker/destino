@@ -1,0 +1,34 @@
+[(#REM)
+404.html — served by SPIP with an HTTP 404 status for unknown URLs.
+
+	No hardcoded section IDs: the recovery links are looped from every
+	published root section, so they survive a re-import.
+)]
+<INCLURE{fond=_entete,niveau=404,rub=error,variante=home-three,titre=Page not found,description=The page you asked for could not be found.}>
+
+<main id="contenu" class="main" role="main">
+
+	<section class="page-head">
+		<div class="wrap">
+			<p class="eyebrow">Error 404</p>
+			<h1 class="page-title">Page not found</h1>
+			<p class="page-lead">The page you asked for is not here. It may have been moved or the address may be mistyped. Try one of the sections below, or head back to the homepage.</p>
+		</div>
+	</section>
+
+	<section class="wrap section-body">
+		<p class="back-link"><a class="text-link" href="#URL_SITE_SPIP/"><span class="arrow" aria-hidden="true">&larr;</span> Back to the homepage</a></p>
+
+		<nav class="siblings" aria-label="Site sections">
+			<h2 class="body-h">Browse the site</h2>
+			<ul class="sibling-list">
+			<BOUCLE_404(RUBRIQUES) {racine} {par id_rubrique}>
+				<li><a href="#URL_RUBRIQUE">#TITRE</a></li>
+			</BOUCLE_404>
+			</ul>
+		</nav>
+	</section>
+
+</main>
+
+<INCLURE{fond=_pied}>

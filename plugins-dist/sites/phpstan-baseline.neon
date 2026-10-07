@@ -1,0 +1,14 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Instantiated class Spip\\Afficher\\Minipage\\Admin not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: action/editer_site.php
+
+		-
+			message: '#^Function is_feed\(\) should return int\|string but return statement is missing\.$#'
+			identifier: return.missing
+			count: 1
+			path: inc/feedfinder.php
+

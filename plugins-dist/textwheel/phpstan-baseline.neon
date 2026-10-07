@@ -1,0 +1,92 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Function yaml_decode not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: engine/textwheelruleset.php
+
+		-
+			message: '#^Instantiated class Spip\\Texte\\Collecteur\\Liens not found\.$#'
+			identifier: class.notFound
+			count: 3
+			path: inc/lien.php
+
+		-
+			message: '#^Instantiated class Spip\\Texte\\Collecteur\\Modeles not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: inc/lien.php
+
+		-
+			message: '#^Function inc_notes_dist\(\) should return array\|string but return statement is missing\.$#'
+			identifier: return.missing
+			count: 1
+			path: inc/notes.php
+
+		-
+			message: '#^Instantiated class Spip\\Texte\\Collecteur\\Liens not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: inc/texte.php
+
+		-
+			message: '#^Instantiated class Spip\\Texte\\Collecteur\\Modeles not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: inc/texte.php
+
+		-
+			message: '#^Attribute class PHPUnit\\Framework\\Attributes\\DataProvider does not exist\.$#'
+			identifier: attribute.notFound
+			count: 2
+			path: tests/AutoliensTest.php
+
+		-
+			message: '#^Attribute class PHPUnit\\Framework\\Attributes\\DataProvider does not exist\.$#'
+			identifier: attribute.notFound
+			count: 2
+			path: tests/TextwheelNettoyerraccourcistypoTest.php
+
+		-
+			message: '#^Attribute class PHPUnit\\Framework\\Attributes\\DataProvider does not exist\.$#'
+			identifier: attribute.notFound
+			count: 3
+			path: tests/TextwheelPropreTest.php
+
+		-
+			message: '#^Function _chemin not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: tests/TextwheelPropreTest.php
+
+		-
+			message: '#^Attribute class PHPUnit\\Framework\\Attributes\\DataProvider does not exist\.$#'
+			identifier: attribute.notFound
+			count: 1
+			path: tests/TextwheelPropreTypoTest.php
+
+		-
+			message: '#^Function _chemin not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: tests/TextwheelPropreTypoTest.php
+
+		-
+			message: '#^Function afficher_html_suspect not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: wheels/spip/echappe-js.php
+
+		-
+			message: '#^Function is_html_safe not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: wheels/spip/echappe-js.php
+
+		-
+			message: '#^Function traiter_math not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: wheels/spip/spip.php
+

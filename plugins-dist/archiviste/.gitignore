@@ -1,0 +1,14 @@
+!/var/tmp/file.unknown
+!/var/tmp/tar/test.tar
+!/var/tmp/test.zip
+!/var/tmp/tgz/test.tar.gz
+/.phpunit.cache
+/build/
+/composer.lock
+/composer.phar
+/phpstan.neon
+/phpunit.xml
+/var
+/vendor/
+/.phpunit.result.cache
+

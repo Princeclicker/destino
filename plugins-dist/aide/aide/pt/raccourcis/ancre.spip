@@ -1,0 +1,9 @@
+Pode definir "âncoras HTML" para propor um link direto para um determinado ponto no meio de uma página de um site SPIP.
+Basta usar o atalho:
+```
+[direto<-]
+```
+
+Ele criará uma âncora com o nome `direto`. Desse modo, por exemplo para a matéria 3723, o URL `https://meusite/spip.php?article3723#direto` levará diretamente ao ponto da matéria onde essa âncora se situa.
+
+Note que as âncoras são compatíveis com os [links hipertexto no interior do site->#liensite]. Assim, o atalho  `[este ponto exato->art123#exato]` levará à âncora com o nome `exato` definida na matéria  123.

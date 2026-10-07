@@ -1,0 +1,20 @@
+{
+  "name": "jakeasmith/http_build_url",
+  "description": "Deprecated: use PHP 8.5's built-in Uri\\Rfc3986\\Uri instead. Provides http_build_url() for environments without pecl_http.",
+  "license": "MIT",
+  "abandoned": true,
+  "authors": [
+    {
+      "name": "Jake A. Smith",
+      "email": "theman@jakeasmith.com",
+      "homepage": "https://jakeasmith.com"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/jakeasmith/http_build_url/issues",
+    "source": "https://github.com/jakeasmith/http_build_url"
+  },
+  "autoload": {
+      "files": ["src/http_build_url.php"]
+  }
+}

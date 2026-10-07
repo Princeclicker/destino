@@ -1,0 +1,11 @@
+Pode-se criar um link hipertexto para a definição de um termo num glossário externo; para um dado termo, basta inserir o atalho `[?termo]` no seu texto.
+
+<aide:code>
+{Memórias Póstumas de Brás Cubas} é a obra principal de [?Machado de Assis]
+</aide:code>
+
+Não deixe de clicar no link para verificar se o termo informado (nome próprio ou nome comum) está grafado corretamente, e se remete para um conteúdo válido.
+
+O glossário externo predefinido é [Wikipedia->https://www.wikipedia.org], que impõe certas [convenções de nomenclatura->https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:Conven%C3%A7%C3%A3o_de_nomenclatura].
+
+Pode-se também [definir outros glossários externos->https://programmer.spip.net/117].

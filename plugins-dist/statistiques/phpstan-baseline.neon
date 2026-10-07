@@ -1,0 +1,20 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Function base_delete_referers_dist\(\) should return string but return statement is missing\.$#'
+			identifier: return.missing
+			count: 1
+			path: base/delete_referers.php
+
+		-
+			message: '#^Function base_delete_stats_dist\(\) should return string but return statement is missing\.$#'
+			identifier: return.missing
+			count: 1
+			path: base/delete_stats.php
+
+		-
+			message: '#^Undefined variable\: \$ie$#'
+			identifier: variable.undefined
+			count: 1
+			path: inc/referenceurs.php
+

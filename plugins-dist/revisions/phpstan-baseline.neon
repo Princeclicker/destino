@@ -1,0 +1,7 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Call to function unset\(\) contains undefined variable \$i_old\.$#'
+			identifier: unset.variable
+			count: 1
+			path: inc/diff.php

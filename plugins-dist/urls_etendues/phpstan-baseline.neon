@@ -1,0 +1,20 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Function urls_type_objet_valide not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: action/editer_url.php
+
+		-
+			message: '#^Function urls_type_objet_valide not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: formulaires/editer_url_objet.php
+
+		-
+			message: '#^Function urls_type_objet_valide not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: urls_fonctions.php
+

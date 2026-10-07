@@ -1,0 +1,43 @@
+<!--=== Contact form, SPIP CVT (formulaires/contact.php) ===-->
+<div class="contact-form-zone">
+	[(#ENV{message_erreur})]
+	[(#ENV{message_ok})]
+	[(#ENV{editable}|oui)
+	<form class="contact-form" action="#ENV{action}" method="post">
+		<input type="hidden" name="formulaire_action" value="#ENV{form}">
+		<input type="hidden" name="formulaire_action_args" value="#ENV{formulaire_args}">
+		<input type="hidden" name="formulaire_sign" value="#ENV{formulaire_sign}">
+		<div class="row">
+			<div class="col-lg-4">
+				<div class="form_group">
+					<input type="text" class="form_control" name="nom" placeholder="Name" value="[(#ENV{nom})]" required>
+					[(#ENV{erreurs/nom})]
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div class="form_group">
+					<input type="email" class="form_control" name="email" placeholder="Email Address" value="[(#ENV{email})]" required>
+					[(#ENV{erreurs/email})]
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div class="form_group">
+					<input type="text" class="form_control" name="telephone" placeholder="Phone Number" value="[(#ENV{telephone})]" required>
+					[(#ENV{erreurs/telephone})]
+				</div>
+			</div>
+			<div class="col-lg-12">
+				<div class="form_group">
+					<textarea name="message" class="form_control" rows="6" placeholder="Write Message" required>[(#ENV{message})]</textarea>
+					[(#ENV{erreurs/message})]
+				</div>
+			</div>
+			<div class="col-lg-12">
+				<div class="form_group text-center">
+					<button type="submit" class="main-btn primary-btn">Send Us Message<i class="fas fa-paper-plane"></i></button>
+				</div>
+			</div>
+		</div>
+	</form>
+	]
+</div>

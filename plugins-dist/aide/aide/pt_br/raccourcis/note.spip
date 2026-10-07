@@ -1,0 +1,25 @@
+Uma nota de rodapé é, normalmente, assinalada por um número colocado no interior do texto, com esse mesmo número retomado no fundo da página, oferecendo uma informação complementar.
+
+No SPIP, esta funcionalidade (bem pesada quando gerenciada manualmente em HTML) é automatizada: as notas são numeradas pelo SPIP, que também gerencia os links hipertexto no interior do documento para pular diretamente da chamada da nota ao seu texto correspondente, e vice-versa.
+
+Uma nota de rodapé é indicada no SPIP entre colchetes duplos, como `[[Uma nota]]`
+
+<aide:code>
+Uma nota[[Essa é uma informação complementar.]] de rodapé.
+</aide:code>
+
+
+{{{Notas não-automáticas}}}
+
+Na maior parte dos casos, o sistema de notas automáticas indicado acima é amplamente suficiente. No entanto, você pode gerenciar as notas de uma forma não automática, "forçando" a escolha do número ou da menção exibida para gerar o link.
+
+O princípio geral consiste em indicar a sua escolha da menção usada entre parêntesis angulares no incício da nota, como `[[<xxx> A nota]]`.
+
+<aide:code>
+Você pode usar as notas numeradas automáticas[[Colocando o texto da nota entre parêntesis retos.]],
+- mas também forças a numeração da nota[[<23> Indicando o número da nota entre os símbolos `<` e `>`.]],
+- usar as notas na forma de asteriscos [[<*> Colocando um asterisco entre os símbolos `<` e `>`.]],
+- criar notas sem referências (não numeradas); atenção, essas notas não possuem link entre a nota e a chamada da nota[[<> Não indicando nada entre os símbolos `<` e `>`.]],
+- atribuir um nome (todo em letras) a uma nota; esta forma é muito difundida para referências bibliográficas[[<Eça> Eça de Queiroz.]];
+- chamar uma nota já criada[[<23>]] indicando o número da nota entre os símbolos `<` e `>` e deixando vazio o resto da nota.
+</aide:code>

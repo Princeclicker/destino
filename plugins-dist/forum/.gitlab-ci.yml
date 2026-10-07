@@ -1,0 +1,71 @@
+stages:
+  - check
+  - build
+  - test
+
+default:
+  image: php:latest
+  cache:
+    paths:
+      - vendor/
+  before_script:
+    # Install git
+    - apt update -yqq
+    - apt install git libzip-dev unzip -yqq
+    - docker-php-ext-install zip
+
+    # Install composer
+    - curl -sS https://getcomposer.org/installer | php
+
+    # Install all project dependencies
+    - php composer.phar install
+
+job:check:php:
+  stage: check
+  when: on_success
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+  before_script:
+    # Remplace le before_script par défaut !
+    - curl -o /usr/local/bin/parallel-lint -fsL https://github.com/php-parallel-lint/PHP-Parallel-Lint/releases/latest/download/parallel-lint.phar
+  script:
+    # Vérifier rapidement les fichiers
+    - php /usr/local/bin/parallel-lint --exclude .git --exclude vendor .
+
+job:build:
+  stage: build
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+  script:
+    # Security check of dependencies
+    - php composer.phar audit --abandoned=report
+
+job:test:ecs:
+  stage: test
+  when: on_success
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+  script:
+    - vendor/bin/ecs check --output-format=gitlab > ecs-quality-report.json
+  artifacts:
+    paths:
+      - ecs-quality-report.json
+    reports:
+      codequality: ecs-quality-report.json
+
+job:test:phpstan:
+  stage: test
+  when: on_success
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+  script:
+    - php -d memory_limit=1G vendor/bin/phpstan analyse --error-format gitlab > phpstan-quality-report.json
+  artifacts:
+    paths:
+      - phpstan-quality-report.json
+    reports:
+      codequality: phpstan-quality-report.json

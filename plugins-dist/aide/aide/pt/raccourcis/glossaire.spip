@@ -1,0 +1,11 @@
+Pode criar um link hipertexto para a definição de um termo num glossário externo; para um dado termo, basta inserir o atalho `[?termo]` no seu texto.
+
+<aide:code>
+{Os Maias} é a obra principal de [?Eça de Queiroz]
+</aide:code>
+
+Considere clicar no link para verificar se o termo informado (nome próprio ou nome comum) está grafado corretamente, e se aponta para um destino válido.
+
+O glossário externo predefinido é [Wikipedia->https://www.wikipedia.org], que impõe certas [convenções de nomenclatura->https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:Conven%C3%A7%C3%A3o_de_nomenclatura].
+
+Pode também [definir outros glossários externos->https://programmer.spip.net/117].

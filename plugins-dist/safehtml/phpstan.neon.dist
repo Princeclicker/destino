@@ -1,0 +1,15 @@
+includes:
+	- phpstan-baseline.neon
+
+parameters:
+    phpVersion: 070400
+    paths:
+        - .
+    excludePaths:
+        analyseAndScan:
+            - src/Texte/Collecteur/MetasMicroData.php
+            - vendor
+            - lang
+        analyse:
+            - lib
+    level: 0

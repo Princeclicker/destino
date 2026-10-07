@@ -1,0 +1,15 @@
+includes:
+	- phpstan-baseline.neon
+
+parameters:
+    paths:
+        - .
+    excludePaths:
+        phpVersion: 070400
+        analyseAndScan:
+            - vendor
+            - lang
+            - tests
+        analyse:
+            - lib
+    level: 0

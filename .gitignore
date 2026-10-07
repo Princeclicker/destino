@@ -1,0 +1,20 @@
+#composer & outils
+/composer.phar
+/composer.local.*
+/phpunit.xml
+/.phpunit.cache
+/docker-compose.override.yml
+/docker-compose.yml
+/*.zip
+
+# secrets - never commit
+/config/*.php
+
+# runtime state (cache, logs, sessions, locks)
+/tmp/*
+!/tmp/.htaccess
+/local/cache-*
+
+# OS / editor noise
+Thumbs.db
+.DS_Store

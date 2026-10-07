@@ -1,0 +1,52 @@
+{
+    "name": "spip-league/composer-installer",
+    "description": "SPIP Composer Installer Plugin",
+    "license": "MIT",
+    "type": "composer-plugin",
+    "authors": [
+        {
+            "name": "JamesRezo",
+            "email": "james@rezo.net"
+        }
+    ],
+    "require": {
+        "composer-plugin-api": "^2.6"
+    },
+    "require-dev": {
+        "composer/composer": "^2.8",
+        "phpunit/phpunit": "^11.4",
+        "rector/rector": "^2.0",
+        "spip-league/easy-coding-standard": "^1.1"
+    },
+    "repositories": {
+        "spip": {
+            "type": "composer",
+            "url": "https://get.spip.net/composer"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "SpipLeague\\Composer\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SpipLeague\\Test\\Composer\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "0.8.x-dev"
+        },
+        "class": "SpipLeague\\Composer\\SpipInstallerPlugin"
+    },
+    "scripts": {
+        "analyse": "vendor/bin/phpstan",
+        "check-cs": "vendor/bin/ecs check --ansi",
+        "fix-cs": "vendor/bin/ecs check --fix --ansi",
+        "rector": "vendor/bin/rector process --ansi",
+        "rector-dry-run": "vendor/bin/rector process --dry-run --ansi",
+        "test": "phpunit --colors --no-coverage",
+        "test-coverage": "@php -d xdebug.mode=coverage vendor/bin/phpunit --colors"
+    }
+}
