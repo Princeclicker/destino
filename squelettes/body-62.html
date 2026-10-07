@@ -39,7 +39,7 @@
                             </div>
                             <div class="info">
                                 <span class="title">Office Location</span>
-                                <p>Kigali, Rwanda</p>
+                                <p>[(#CONFIG{destino_adresse, Kigali, Rwanda})]</p>
                             </div>
                         </div>
                     </div>
@@ -51,7 +51,7 @@
                             </div>
                             <div class="info">
                                 <span class="title">Email Address</span>
-                                <p><a href="mailto:info@destinoaccesshub.com">info@destinoaccesshub.com</a></p>
+                                <p><a href="mailto:[(#CONFIG{destino_email, info@destinoaccesshub.com})]">[(#CONFIG{destino_email, info@destinoaccesshub.com})]</a></p>
                             </div>
                         </div>
                     </div>
@@ -63,7 +63,7 @@
                             </div>
                             <div class="info">
                                 <span class="title">Hotline</span>
-                                <p><a href="tel:+250786362004">+250 786 362 004</a></p>
+                                <p><a href="tel:[(#CONFIG{destino_telephone, +250786362004})]">[(#CONFIG{destino_telephone, +250 786 362 004})]</a></p>
                             </div>
                         </div>
                     </div>
@@ -74,7 +74,7 @@
         <section class="contact-page-map pb-100 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
             <!--=== Map Box ===-->
             <div class="map-box">
-                <iframe src="https://maps.google.com/maps?q=Kigali%2C%20Rwanda&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+                <iframe src="[(#CONFIG{destino_carte, https://maps.google.com/maps?q=Kigali%2C%20Rwanda&t=&z=13&ie=UTF8&iwloc=&output=embed})]"></iframe>
             </div>
         </section><!--====== End Contact Map Section ======-->
         <!--====== Start Contact Section ======-->

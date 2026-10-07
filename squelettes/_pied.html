@@ -19,15 +19,14 @@ The section markers below are plain HTML comments. They render
             <div class="col-xl-7 col-lg-8">
                 <!--=== CTA Content Box ===-->
                 <div class="cta-content-box text-white">
-                    <h2 class="mb-35">Ready to Discover Rwanda
-                        With Destino Access Hub?</h2>
+                    <h2 class="mb-35">[(#CONFIG{destino_cta_titre, Ready to Discover Rwanda With Destino Access Hub?})]</h2>
                     <a href="spip.php?rubrique58" class="main-btn secondary-btn">Request a Quote<i class="far fa-paper-plane"></i></a>
                 </div>
             </div>
             <div class="col-xl-5 col-lg-4">
                 <!--=== Play Box ===-->
                 <div class="play-box text-center">
-                    <a href="https://www.youtube.com/watch?v=ibuUmMhD2Pg" class="video-popup"><i class="fas fa-play"></i></a>
+                    <a href="[(#CONFIG{destino_youtube, https://www.youtube.com/watch?v=ibuUmMhD2Pg})]" class="video-popup"><i class="fas fa-play"></i></a>
                 </div>
             </div>
         </div>
@@ -42,7 +41,7 @@ The section markers below are plain HTML comments. They render
 					<div class="footer-widget about-company-widget" style="flex:1;">
 						<h4 class="widget-title">About</h4>
 						<div class="footer-content">
-							<p>Destino Access Hub Ltd is a Rwanda-based travel and access company connecting people with destinations, experiences and opportunities across Rwanda.</p>
+							<p>[(#CONFIG{destino_footer_about, Destino Access Hub Ltd is a Rwanda-based travel and access company connecting people with destinations, experiences and opportunities across Rwanda.})]</p>
 							</div>
 					</div>
 				</div>
@@ -54,8 +53,9 @@ The section markers below are plain HTML comments. They render
 							<ul class="footer-widget-nav" style="width:65%;columns:2;column-gap:5px;">
 								<li style="margin-bottom:2px;break-inside:avoid;"><a href="#URL_SITE_SPIP/">Home</a></li>
 								<li style="margin-bottom:2px;break-inside:avoid;"><a href="spip.php?rubrique58">About Us</a></li>
-								<li style="margin-bottom:2px;break-inside:avoid;"><a href="spip.php?rubrique60">Tour Packages</a></li>
-								<li style="margin-bottom:2px;break-inside:avoid;"><a href="spip.php?rubrique59">Destinations</a></li>
+<li style="margin-bottom:2px;break-inside:avoid;"><a href="spip.php?rubrique60">Tour Packages</a></li>
+							<li style="margin-bottom:2px;break-inside:avoid;"><a href="spip.php?rubrique63">Services</a></li>
+							<li style="margin-bottom:2px;break-inside:avoid;"><a href="spip.php?rubrique59">Destinations</a></li>
 								<li style="margin-bottom:2px;break-inside:avoid;"><a href="spip.php?rubrique61">Blog</a></li>
 								<li style="break-inside:avoid;"><a href="spip.php?rubrique62">Contact Us</a></li>
 							</ul>
@@ -69,9 +69,9 @@ The section markers below are plain HTML comments. They render
 					<h4 class="widget-title">Contact &amp; Newsletter</h4>
 					<div class="footer-content">
 						<ul class="footer-widget-nav">
-							<li><i class="fas fa-map-marker-alt"></i> Kigali, Rwanda</li>
-							<li><i class="fas fa-phone-alt"></i> +250 786 362 004</li>
-							<li><i class="fas fa-envelope"></i> <a href="mailto:info@destinoaccesshub.com">info@destinoaccesshub.com</a></li>
+							<li><i class="fas fa-map-marker-alt"></i> [(#CONFIG{destino_adresse, Kigali, Rwanda})]</li>
+							<li><i class="fas fa-phone-alt"></i> [(#CONFIG{destino_telephone, +250 786 362 004})]</li>
+							<li><i class="fas fa-envelope"></i> <a href="mailto:[(#CONFIG{destino_email, info@destinoaccesshub.com})]">[(#CONFIG{destino_email, info@destinoaccesshub.com})]</a></li>
 						</ul>
 					</div>
 				</div>
@@ -85,7 +85,7 @@ The section markers below are plain HTML comments. They render
 			<div class="row">
 				<div class="col-lg-6">
 					<div class="footer-text">
-						<p>&copy; Destino Access Hub Ltd, All Right Reserved</p>
+						<p>[(#CONFIG{destino_copyright, © Destino Access Hub Ltd, All Right Reserved})]</p>
 					</div>
 				</div>
 				<div class="col-lg-6">

@@ -1,0 +1,16 @@
+<paquet
+	prefix="destino"
+	version="1.0.0"
+	etat="stable"
+	compatibilite="[4.2.0;4.*]"
+>
+	<nom>Destino</nom>
+	<auteur>Destino Access Hub Ltd</auteur>
+
+	<pipeline nom="autoriser" inclure="destino_autoriser.php" />
+	<pipeline nom="declarer_tables_auxiliaires" inclure="base/messages.php" />
+	<pipeline nom="affiche_milieu" inclure="destino_pipelines.php" />
+
+	<menu nom="destino_messages" titre="destino:menu_messages" parent="menu_activite" icone="images/information-xx.svg" action="destino_messages" />
+	<menu nom="destino_settings" titre="destino:menu_settings" parent="menu_configuration" icone="images/configuration-xx.svg" action="destino_settings" />
+</paquet>

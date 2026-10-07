@@ -1,0 +1,64 @@
+<div class="formulaire_spip formulaire_configurer formulaire_#FORM">
+<h3 class='titrem'><img src="#CHEMIN_IMAGE{configuration-24.png}" class="cadre-icone"><:destino:titre_form:></h3>
+	[<div class="reponse_formulaire reponse_formulaire_ok" role="status">(#ENV*{message_ok})</div>]
+	[<div class="reponse_formulaire reponse_formulaire_erreur" role="alert">(#ENV*{message_erreur})</div>]
+	<p><:destino:intro_settings:></p>
+	[(#ENV{editable})
+	<form method='post' action='#ENV{action}'><div>
+		#ACTION_FORMULAIRE
+		<fieldset><legend><:destino:titre_form:></legend>
+			<div class="editer-groupe">
+				#SET{name,destino_adresse}#SET{erreurs,#ENV*{erreurs/#GET{name}}}
+				<div class="editer long_label editer_[(#GET{name})][ (#GET{erreurs}|oui)erreur]">
+					<label for="#GET{name}"><:destino:lbl_adresse:></label>[
+					<span class='erreur_message' role="alert">(#GET{erreurs})</span>
+					]<input type="text" class="text" name="#GET{name}" id="#GET{name}" value="[(#ENV{#GET{name}}|attribut_html)]" />
+				</div>
+				#SET{name,destino_email}#SET{erreurs,#ENV*{erreurs/#GET{name}}}
+				<div class="editer long_label editer_[(#GET{name})][ (#GET{erreurs}|oui)erreur]">
+					<label for="#GET{name}"><:destino:lbl_email:></label>[
+					<span class='erreur_message' role="alert">(#GET{erreurs})</span>
+					]<input type="text" class="text" name="#GET{name}" id="#GET{name}" value="[(#ENV{#GET{name}}|attribut_html)]" />
+				</div>
+				#SET{name,destino_telephone}#SET{erreurs,#ENV*{erreurs/#GET{name}}}
+				<div class="editer long_label editer_[(#GET{name})][ (#GET{erreurs}|oui)erreur]">
+					<label for="#GET{name}"><:destino:lbl_telephone:></label>[
+					<span class='erreur_message' role="alert">(#GET{erreurs})</span>
+					]<input type="text" class="text" name="#GET{name}" id="#GET{name}" value="[(#ENV{#GET{name}}|attribut_html)]" />
+				</div>
+				#SET{name,destino_cta_titre}#SET{erreurs,#ENV*{erreurs/#GET{name}}}
+				<div class="editer long_label editer_[(#GET{name})][ (#GET{erreurs}|oui)erreur]">
+					<label for="#GET{name}"><:destino:lbl_cta_titre:></label>[
+					<span class='erreur_message' role="alert">(#GET{erreurs})</span>
+					]<input type="text" class="text" name="#GET{name}" id="#GET{name}" value="[(#ENV{#GET{name}}|attribut_html)]" />
+				</div>
+				#SET{name,destino_youtube}#SET{erreurs,#ENV*{erreurs/#GET{name}}}
+				<div class="editer long_label editer_[(#GET{name})][ (#GET{erreurs}|oui)erreur]">
+					<label for="#GET{name}"><:destino:lbl_youtube:></label>[
+					<span class='erreur_message' role="alert">(#GET{erreurs})</span>
+					]<input type="text" class="text" name="#GET{name}" id="#GET{name}" value="[(#ENV{#GET{name}}|attribut_html)]" />
+				</div>
+				#SET{name,destino_copyright}#SET{erreurs,#ENV*{erreurs/#GET{name}}}
+				<div class="editer long_label editer_[(#GET{name})][ (#GET{erreurs}|oui)erreur]">
+					<label for="#GET{name}"><:destino:lbl_copyright:></label>[
+					<span class='erreur_message' role="alert">(#GET{erreurs})</span>
+					]<input type="text" class="text" name="#GET{name}" id="#GET{name}" value="[(#ENV{#GET{name}}|attribut_html)]" />
+				</div>
+				#SET{name,destino_carte}#SET{erreurs,#ENV*{erreurs/#GET{name}}}
+				<div class="editer long_label editer_[(#GET{name})][ (#GET{erreurs}|oui)erreur]">
+					<label for="#GET{name}"><:destino:lbl_carte:></label>[
+					<span class='erreur_message' role="alert">(#GET{erreurs})</span>
+					]<input type="text" class="text" name="#GET{name}" id="#GET{name}" value="[(#ENV{#GET{name}}|attribut_html)]" />
+				</div>
+				#SET{name,destino_footer_about}#SET{erreurs,#ENV*{erreurs/#GET{name}}}
+				<div class="editer long_label editer_[(#GET{name})][ (#GET{erreurs}|oui)erreur]">
+					<label for="#GET{name}"><:destino:lbl_footer_about:></label>[
+					<span class='erreur_message' role="alert">(#GET{erreurs})</span>
+					]<textarea class="textarea" name="#GET{name}" id="#GET{name}" rows="4">[(#ENV{#GET{name}})]</textarea>
+				</div>
+			</div>
+		</fieldset>
+		<p class='boutons'><span class='image_loading'>&nbsp;</span><input type='submit' class='btn submit' value='<:bouton_enregistrer:>'></p>
+	</div></form>
+	]
+</div>

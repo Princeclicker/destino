@@ -24,12 +24,16 @@ article.html — a single published article.
 
 	<section class="wrap section-body">
 		<article class="article-card">
-			<h1 class="page-title">#TITRE</h1>
-			[<p class="page-lead">(#CHAPO|textebrut)</p>]
+		<h1 class="page-title">#TITRE</h1>
+		[<p class="page-lead">(#CHAPO|textebrut)</p>]
+		[<p class="page-lead">(#SOUSTITRE|textebrut)</p>]
+		[<p class="page-lead"><strong>(#DESCRIPTIF|textebrut)</strong></p>]
+		<BOUCLE_dur(MOTS){id_article}{type=duree}><p class="page-lead">Duration: #TITRE</p></BOUCLE_dur>
 
-			<div class="prose">
-				#TEXTE
-			</div>
+		<div class="prose">
+			#TEXTE
+		</div>
+		[<p class="prose">#PS</p>]
 
 			<B_nav>
 			<nav class="siblings" aria-label="More in this section">

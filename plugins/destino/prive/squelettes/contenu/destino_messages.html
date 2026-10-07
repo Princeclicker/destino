@@ -1,0 +1,19 @@
+[(#AUTORISER{destino_messages}|sinon_interdire_acces)]
+
+<h1 class="grostitre"><:destino:titre_messages:></h1>
+
+<div class="liste manuscripts">
+	<BOUCLE_messages(destino_messages){par date_message}{inverse}>
+		<div class="liste-item">
+			<div class="liste-item-titre"><strong>[(#NOM)]</strong>
+				[<span class="liste-item-titre-secondaire"><a href="mailto:#EMAIL">(#EMAIL)</a></span>]
+				[<span class="liste-item-date">(#TELEPHONE)</span>]
+			</div>
+			<div class="liste-item-date">[(#DATE_MESSAGE|affdate{d/m/Y H:i})]</div>
+			<div class="texte">[<p>(#MESSAGE)</p>]</div>
+			[(#BOUTON_ACTION{<:destino:btn_supprimer:>,#URL_ACTION_AUTEUR{destino_messages,#ID_MESSAGE}})]
+		</div>
+	</BOUCLE_messages>
+	<p class="reponse_formulaire reponse_formulaire_erreur aucun_message"><:destino:aucun_message:></p>
+	<//B_messages>
+</div>

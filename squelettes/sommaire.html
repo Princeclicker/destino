@@ -158,7 +158,7 @@
 <div class="col-lg-6">                    
 <!--=== About Image Box ===-->                    
 <div class="about-image-box mb-50">                        
-<img src="IMG/theme/images/about-2.jpg" class="rounded-2" alt="About Image" style="width:70%;height:auto;display:block;margin:0 auto;">                    
+<BOUCLE_ab(DOCUMENTS){id_document=35}><img src="#URL_DOCUMENT_FICHIER" class="rounded-2" alt="About Image" style="width:70%;height:auto;display:block;margin:0 auto;"></BOUCLE_ab>                    
 </div>                
 </div>                
 <div class="col-lg-6">                    
@@ -267,42 +267,20 @@
 </div>            
 </div>            
 <div class="slider-active-3-item">
-<div class="single-service-item-three mb-40" >                    
-<div class="content">                        
-<h3 class="title">
-<a href="#" tabindex="-1">Tour Planning &amp; Itineraries</a>
-</h3>                        
-<p>Custom itineraries for gorilla treks, safaris and city tours across Rwanda.</p>                        
-<img src="IMG/theme/images/service-5.jpg" alt="service image">                        
-<a href="spip.php?rubrique62" class="btn-link" tabindex="-1">Enquire<i class="far fa-long-arrow-right"></i></a>                        
-<div class="meta">                        
-</div>                    
-</div>                
+<BOUCLE_serv(ARTICLES){id_rubrique=63}{par id_article}{0,3}>
+<div class="single-service-item-three mb-40" >
+    <div class="content">
+        <h3 class="title">
+<a href="#URL_ARTICLE" tabindex="-1">#TITRE</a>
+</h3>
+<p>[(#CHAPO|sinon{(#DESCRIPTIF)})]</p>
+<BOUCLE_sd(DOCUMENTS){id_article}{tout}{0,1}><img src="#URL_DOCUMENT_FICHIER" alt="[(#TITRE|attribut_html)]"></BOUCLE_sd>
+<a href="spip.php?rubrique62" class="btn-link" tabindex="-1">Enquire<i class="far fa-long-arrow-right"></i></a>
+<div class="meta">
 </div>
-<div class="single-service-item-three mb-40" >                    
-<div class="content">                        
-<h3 class="title">
-<a href="spip.php?rubrique60" tabindex="-1">Small Cabin Wood</a>
-</h3>                        
-<p>To take trivial example which undertakes                            laborious physical exercise chooses</p>                        
-<img src="IMG/theme/images/service-6.jpg" alt="service image">                        
-<a href="spip.php?rubrique62" class="btn-link" tabindex="-1">Enquire<i class="far fa-long-arrow-right"></i></a>                        
-<div class="meta">                        
-</div>                    
-</div>                
 </div>
-<div class="single-service-item-three mb-40" >                    
-<div class="content">                        
-<h3 class="title">
-<a href="#" tabindex="-1">Airport &amp; Ground Transfers</a>
-</h3>                        
-<p>Pick-ups from Kigali International Airport and comfortable transport between destinations.</p>                        
-<img src="IMG/theme/images/service-4.jpg" alt="service image">                        
-<a href="spip.php?rubrique62" class="btn-link" tabindex="-1">Enquire<i class="far fa-long-arrow-right"></i></a>                        
-<div class="meta">                        
-</div>                    
-</div>                
 </div>
+</BOUCLE_serv>
 </div>        
 </div></section>
 <!--====== End Service Section ======-->
@@ -317,19 +295,19 @@
                             <div class="col-md-6">
                                 <!--=== We Image ===-->
                                 <div class="we-image mb-30">
-                                    <img src="IMG/theme/images/we-3.jpg" alt="we Image">
+                                    <BOUCLE_w1(DOCUMENTS){id_document=36}><img src="#URL_DOCUMENT_FICHIER" alt="we Image"></BOUCLE_w1>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <!--=== We Image ===-->
                                 <div class="we-image mb-30">
-                                    <img src="IMG/theme/images/we-4.jpg" alt="we Image">
+                                    <BOUCLE_w2(DOCUMENTS){id_document=37}><img src="#URL_DOCUMENT_FICHIER" alt="we Image"></BOUCLE_w2>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <!--=== We Image ===-->
                                 <div class="we-image mb-30 pr-lg-30 text-md-end">
-                                    <img src="IMG/theme/images/we-5.jpg" alt="we Image">
+                                    <BOUCLE_w3(DOCUMENTS){id_document=38}><img src="#URL_DOCUMENT_FICHIER" alt="we Image"></BOUCLE_w3>
                                 </div>
                             </div>
                         </div>
@@ -346,6 +324,7 @@
                         </div>
                         <!--=== Features List ===-->
                         <div class="features-list_one">
+                            <BOUCLE_we(ARTICLES){id_rubrique=58}{par id_article}{0,3}>
                             <!--=== Single Features List ===-->
                             <div class="single-features-list mb-40">
                                 <div class="icon-inner d-flex align-items-center">
@@ -357,42 +336,11 @@
                                     </div>
                                 </div>
                                 <div class="content">
-                                    <h4>Safety First Always</h4>
-                                    <p>Set perspiciatis unde omnis estenatus voluptatem
-                                        accusantium laudantium totarem aperiae</p>
+                                    <h4>#TITRE</h4>
+                                    <p>[(#CHAPO|sinon{(#DESCRIPTIF)})]</p>
                                 </div>
                             </div>
-                            <!--=== Single Features List ===-->
-                            <div class="single-features-list mb-40">
-                                <div class="icon-inner d-flex align-items-center">
-                                    <div class="icon-check">
-                                        <i class="fas fa-badge-check"></i>
-                                    </div>
-                                    <div class="icon">
-                                        <i class="flaticon-best-price"></i>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h4>Low Price &amp; Friendly</h4>
-                                    <p>Quis autem vel eum iure reprehenderit voluptate velit esse nihile molestiae consequatur.</p>
-                                </div>
-                            </div>
-                            <!--=== Single Features List ===-->
-                            <div class="single-features-list mb-40">
-                                <div class="icon-inner d-flex align-items-center">
-                                    <div class="icon-check">
-                                        <i class="fas fa-badge-check"></i>
-                                    </div>
-                                    <div class="icon">
-                                        <i class="flaticon-travel"></i>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h4>Trusted Travel Guide</h4>
-                                    <p>At vero accusamus dignissimos ducimus blanditiis
-                                        praesentium voluptatum deleniti atque quos</p>
-                                </div>
-                            </div>
+                            </BOUCLE_we>
                         </div>
                     </div>
                 </div>
@@ -411,52 +359,26 @@
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-center">
+<div class="row justify-content-center">
+                <BOUCLE_hp(ARTICLES){id_rubrique=61}{par date}{inverse}{0,3}>
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <!--=== Single Blog Post ===-->
                     <div class="single-blog-post-three mb-40">
                         <div class="post-thumbnail">
-                            <img src="IMG/theme/images/blog-13.jpg" alt="Blog Image">
+                            <BOUCLE_hpdoc(DOCUMENTS){id_article}{tout}{0,1}>
+                            <img src="#URL_DOCUMENT_FICHIER" alt="Blog Image">
+                            </BOUCLE_hpdoc>
                         </div>
                         <div class="entry-content">
                             <div class="post-meta">
-                                <span><i class="far fa-calendar-alt"></i><a href="#">November 15, 2022</a></span>
-                                <h3 class="title"><a href="spip.php?rubrique61">Gorilla Trekking in Rwanda: What to Pack and Expect</a></h3>
-                                <a href="spip.php?rubrique61" class="main-btn filled-btn">Read More<i class="far fa-paper-plane"></i></a>
+                                <span><i class="far fa-calendar-alt"></i>#DATE|affdate{d F Y}</span>
+                                <h3 class="title"><a href="#URL_ARTICLE">#TITRE</a></h3>
+                                <a href="#URL_ARTICLE" class="main-btn filled-btn">Read More<i class="far fa-paper-plane"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <!--=== Single Blog Post ===-->
-                    <div class="single-blog-post-three mb-40">
-                        <div class="post-thumbnail">
-                            <img src="IMG/theme/images/blog-14.jpg" alt="Blog Image">
-                        </div>
-                        <div class="entry-content">
-                            <div class="post-meta">
-                                <span><i class="far fa-calendar-alt"></i><a href="#">November 15, 2022</a></span>
-                                <h3 class="title"><a href="spip.php?rubrique61">Best Time to Visit Rwanda's National Parks</a></h3>
-                                <a href="spip.php?rubrique61" class="main-btn filled-btn">Read More<i class="far fa-paper-plane"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <!--=== Single Blog Post ===-->
-                    <div class="single-blog-post-three mb-40">
-                        <div class="post-thumbnail">
-                            <img src="IMG/theme/images/blog-15.jpg" alt="Blog Image">
-                        </div>
-                        <div class="entry-content">
-                            <div class="post-meta">
-                                <span><i class="far fa-calendar-alt"></i><a href="#">November 15, 2022</a></span>
-                                <h3 class="title"><a href="spip.php?rubrique61">A First-Timer's Guide to Kigali City</a></h3>
-                                <a href="spip.php?rubrique61" class="main-btn filled-btn">Read More<i class="far fa-paper-plane"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </BOUCLE_hp>
             </div>
         </div>
     </section><!--====== End Blog Section ======-->

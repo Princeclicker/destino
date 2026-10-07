@@ -20,158 +20,24 @@
         <section class="destination-section pb-100" style="margin-top:80px;">
             <div class="container">
                 <div class="row justify-content-center">
+                    <BOUCLE_destinations(ARTICLES){id_rubrique=59}{par id_article}>
                     <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="single-place-item-two mb-30 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
                             <div class="place-img">
-                                <img src="IMG/theme/images/place-10.jpg" alt="Place Image">
+                                <BOUCLE_d(DOCUMENTS){id_article}{tout}{0,1}>
+                                <img src="#URL_DOCUMENT_FICHIER" alt="[(#TITRE|attribut_html)]">
+                                </BOUCLE_d>
                                 <span class="tour-count">Explore</span>
                                 <div class="place-content">
                                     <div class="info text-white">
-                                        <h3 class="title mb-10">Volcanoes National Park</h3>
-                                        <p class="price">View Tours</p>
+                                        <h3 class="title mb-10"><a href="#URL_ARTICLE" style="color:#fff;">#TITRE</a></h3>
+                                        [<p class="price">(#SOUSTITRE)</p>]
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="single-place-item-two mb-30 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-                            <div class="place-img">
-                                <img src="IMG/theme/images/place-11.jpg" alt="Place Image">
-                                <span class="tour-count">Explore</span>
-                                <div class="place-content">
-                                    <div class="info text-white">
-                                        <h3 class="title mb-10">Akagera National Park</h3>
-                                        <p class="price">View Tours</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12">
-                        <div class="single-place-item-two mb-30 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-                            <div class="place-img">
-                                <img src="IMG/theme/images/place-12.jpg" alt="Place Image">
-                                <span class="tour-count">Explore</span>
-                                <div class="place-content">
-                                    <div class="info text-white">
-                                        <h3 class="title mb-10">Nyungwe National Park</h3>
-                                        <p class="price">View Tours</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-                        <div class="single-place-item-two mb-30">
-                            <div class="place-img">
-                                <img src="IMG/theme/images/place-13.jpg" alt="Place Image">
-                                <span class="tour-count">Explore</span>
-                                <div class="place-content">
-                                    <div class="info text-white">
-                                        <h3 class="title mb-10">Lake Kivu</h3>
-                                        <p class="price">View Tours</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-                        <div class="single-place-item-two mb-30">
-                            <div class="place-img">
-                                <img src="IMG/theme/images/place-14.jpg" alt="Place Image">
-                                <span class="tour-count">Explore</span>
-                                <div class="place-content">
-                                    <div class="info text-white">
-                                        <h3 class="title mb-10">Kigali City</h3>
-                                        <p class="price">View Tours</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-                        <div class="single-place-item-two mb-30">
-                            <div class="place-img">
-                                <img src="IMG/theme/images/place-15.jpg" alt="Place Image">
-                                <span class="tour-count">Explore</span>
-                                <div class="place-content">
-                                    <div class="info text-white">
-                                        <h3 class="title mb-10">Huye</h3>
-                                        <p class="price">View Tours</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-                        <div class="single-place-item-two mb-30">
-                            <div class="place-img">
-                                <img src="IMG/theme/images/place-16.jpg" alt="Place Image">
-                                <span class="tour-count">Explore</span>
-                                <div class="place-content">
-                                    <div class="info text-white">
-                                        <h3 class="title mb-10">Nyanza</h3>
-                                        <p class="price">View Tours</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12">
-                        <div class="single-place-item-two mb-30 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-                            <div class="place-img">
-                                <img src="IMG/theme/images/place-17.jpg" alt="Place Image">
-                                <span class="tour-count">Explore</span>
-                                <div class="place-content">
-                                    <div class="info text-white">
-                                        <h3 class="title mb-10">Gishwati-Mukura</h3>
-                                        <p class="price">View Tours</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="single-place-item-two mb-30 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-                            <div class="place-img">
-                                <img src="IMG/theme/images/place-18.jpg" alt="Place Image">
-                                <span class="tour-count">Explore</span>
-                                <div class="place-content">
-                                    <div class="info text-white">
-                                        <h3 class="title mb-10">Twin Lakes</h3>
-                                        <p class="price">View Tours</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="single-place-item-two mb-30 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-                            <div class="place-img">
-                                <img src="IMG/theme/images/place-19.jpg" alt="Place Image">
-                                <span class="tour-count">Explore</span>
-                                <div class="place-content">
-                                    <div class="info text-white">
-                                        <h3 class="title mb-10">Lake Muhazi</h3>
-                                        <p class="price">View Tours</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <ul class="gowilds-pagination wow fadeInUp text-center mt-30" style="visibility: visible; animation-name: fadeInUp;">
-                            <li><a href="#"><i class="far fa-arrow-left"></i></a></li>
-                            <li><a href="#" class="active">01</a></li>
-                            <li><a href="#">02</a></li>
-                            <li><a href="#">03</a></li>
-                            <li><a href="#">04</a></li>
-                            <li><a href="#"><i class="far fa-arrow-right"></i></a></li>
-                        </ul>
-                    </div>
+                    </BOUCLE_destinations>
                 </div>
             </div>
         </section><!--====== End Destination Section ======-->

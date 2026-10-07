@@ -7,13 +7,17 @@
 	"Undefined filter ==" and echo the source into the page.
 
 		body-58.html  About Us    GoWilds about.html
-		body-59.html  Services    GoWilds destination.html
+		body-59.html  Destinations GoWilds destination.html
 		body-60.html  Tours       GoWilds tour.html
 		body-61.html  Blog        GoWilds blog.html
 		body-62.html  Contact     GoWilds contact.html
+		body-63.html  Services    services grid from rubrique 63 articles
 
-	Adding a section means adding body-ID.html for its new id, otherwise the
-	dynamic include fails.
+	The page must sit inside a RUBRIQUES loop: this is what makes the
+	environment id_rubrique available to #ID_RUBRIQUE below (and to the
+	enclosed body file), so body templates can build loops for the current
+	section. Adding a section means adding body-ID.html for its new id,
+	otherwise the dynamic include fails.
 
 	Never put square brackets inside a REM comment in this project. The lexer
 	treats a bracket pair as a code delimiter and then echoes the whole comment
@@ -21,8 +25,12 @@
 	too, so REM is the only comment form that works here.
 )]
 
-<INCLURE{fond=_entete,niveau=rubrique,rub=#ID_RUBRIQUE,titre=#TITRE,description=#DESCRIPTIF}>
+<BOUCLE_rubrique(RUBRIQUES){id_rubrique}>
+
+<INCLURE{fond=_entete,niveau=rubrique,rub=#ID_RUBRIQUE,description=#DESCRIPTIF}>
 
 <INCLURE{fond=body-#ID_RUBRIQUE}>
 
 <INCLURE{fond=_pied}>
+
+</BOUCLE_rubrique>

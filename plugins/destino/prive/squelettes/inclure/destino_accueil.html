@@ -1,0 +1,14 @@
+<!--destino_accueil-->
+[(#AUTORISER{configurer,_destino}|oui)
+<div class="accueil_destino">
+	#BOITE_OUVRIR{<:destino:raccourcis:>,'simple','titrem'}
+		<ul class="liste-items">
+			<li class="item"><strong><a href="[(#URL_ECRIRE{destino_messages})]"><:destino:voir_messages:></a></strong></li>
+			<li class="item"><strong><a href="[(#URL_ECRIRE{destino_settings})]"><:destino:voir_reglages:></a></strong></li>
+			<li class="item"><a href="[(#URL_ECRIRE{rubriques})]"><:destino:voir_rubriques:></a></li>
+		</ul>
+	#BOITE_PIED
+	#BOITE_FERMER
+</div>
+]
+<!--/destino_accueil-->

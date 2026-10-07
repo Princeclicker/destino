@@ -1,0 +1,48 @@
+<!--====== End Header ======-->    <!-- header area end -->
+        
+    <!--====== Start Breadcrumb Section ======-->
+        <section class="page-banner overlay pt-170 pb-220 bg_cover" style="background-image: url(IMG/theme/images/page-bg.jpg);">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="page-banner-content text-center text-white">
+                            <h1 class="page-title">Our Services</h1>
+                            <ul class="breadcrumb-link text-white">
+                                <li><a href="/">Home</a></li>
+                                <li class="active">Our Services</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!--====== End Breadcrumb Section ======-->
+        <!--====== Start Service Section ======-->
+        <section class="service-section pt-100 pb-60">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-7">
+                        <!--=== Section Title ===-->
+                        <div class="section-title text-center mb-50 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+                            <span class="sub-title">Our Services</span>
+                            <h2>Travel Services Designed<br>Around Rwanda</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <BOUCLE_services(ARTICLES){id_rubrique=63}{par id_article}>
+                    <div class="col-md-6 col-lg-4 col-sm-12">
+                        <div class="single-service-item-three mb-40">
+                            <div class="content">
+                                <h3 class="title"><a href="#URL_ARTICLE">#TITRE</a></h3>
+                                <p>[(#CHAPO|sinon{(#DESCRIPTIF)})]</p>
+                                <BOUCLE_services_doc(DOCUMENTS){id_article}{tout}{0,1}>
+                                <img src="#URL_DOCUMENT_FICHIER" alt="[(#TITRE|attribut_html)]">
+                                </BOUCLE_services_doc>
+                                <a href="spip.php?rubrique62" class="btn-link">Enquire<i class="far fa-long-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    </BOUCLE_services>
+                </div>
+            </div>
+        </section><!--====== End Service Section ======-->
