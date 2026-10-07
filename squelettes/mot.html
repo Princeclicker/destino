@@ -1,0 +1,58 @@
+[(#REM)
+	mot.html - blog category pages (sidebar Category widget).
+
+	Everything sits inside BOUCLE_principale(MOTS) {id_mot} the way
+	squelettes-dist/mot.html does it: on page=mot the keyword is taken from
+	the request, and #TITRE / #DESCRIPTIF only resolve inside that loop.
+	Articles are listed newest first inside the same big rounded scrollable
+	card article.html uses. Images come from each article's attached
+	document (spip_documents + spip_documents_liens).
+)]
+
+<BOUCLE_principale(MOTS) {id_mot}>
+<INCLURE{fond=_entete,niveau=rubrique,rub=mot,titre=#TITRE,description=#DESCRIPTIF}>
+
+<main id="contenu" class="main" role="main">
+
+	<section class="page-head">
+		<div class="wrap">
+			<nav class="crumbs" aria-label="Breadcrumb">
+				<ol>
+					<li><a href="#URL_SITE_SPIP/">Home</a></li>
+					<li><a href="spip.php?rubrique61">Blog</a></li>
+					<li aria-current="page">[(#TITRE|couper{40})]</li>
+				</ol>
+			</nav>
+		</div>
+	</section>
+
+	<section class="wrap section-body">
+		<article class="article-card">
+			<h1 class="page-title">[(#TITRE)]</h1>
+			[<p class="page-lead">(#DESCRIPTIF|textebrut)</p>]
+
+			<div class="category-post-list">
+			<B_posts>
+				<BOUCLE_posts(ARTICLES) {id_mot} {par date}>
+				<div class="category-post">
+					<BOUCLE_logo2(DOCUMENTS) {id_article} {tout} {0,1}>
+					<img class="category-post-img" src="#URL_DOCUMENT_FICHIER" alt="">
+					</BOUCLE_logo2>
+					<div class="category-post-body">
+						<h2 class="category-post-title"><a href="#URL_ARTICLE">#TITRE</a></h2>
+						[<p class="category-post-text">(#CHAPO|textebrut|couper{260})</p>]
+						<a class="category-post-link" href="#URL_ARTICLE">Read More<i class="fas fa-paper-plane"></i></a>
+					</div>
+				</div>
+				</BOUCLE_posts>
+			</B_posts>
+			</div>
+
+			<p class="back-link"><a class="text-link" href="spip.php?rubrique61"><span class="arrow" aria-hidden="true">&larr;</span> Back to Blog</a></p>
+		</article>
+	</section>
+
+</main>
+
+<INCLURE{fond=_pied}>
+</BOUCLE_principale>
