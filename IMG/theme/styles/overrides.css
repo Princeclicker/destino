@@ -506,5 +506,24 @@
   .category-post-img { flex: none; width: 100%; height: 190px; }
 }
 
+/* Partners: keep every logo on one straight horizontal line.
+   The strip is a 5-up slider; each slide is ~212px wide. Logos can be
+   square (RDB 230x230) or landscape (Visit Rwanda 320x80), so normalize
+   them to a fixed display height and center them on a shared midline. */
+.partner-slider-one .single-partner-item .partner-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+.partner-slider-one .single-partner-item .partner-img img {
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
 
 
